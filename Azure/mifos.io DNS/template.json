@@ -1,0 +1,314 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "dnszones_mifos.io_name": {
+            "defaultValue": "mifos.io",
+            "type": "String"
+        },
+        "publicIPAddresses_FneractCN_ip_externalid": {
+            "defaultValue": "/subscriptions/b886a613-960a-4443-9742-410e4d353835/resourceGroups/FineractCN/providers/Microsoft.Network/publicIPAddresses/FneractCN-ip",
+            "type": "String"
+        },
+        "publicIPAddresses_APIGateway_ip_externalid": {
+            "defaultValue": "/subscriptions/b886a613-960a-4443-9742-410e4d353835/resourceGroups/DFSP1OpenBank/providers/Microsoft.Network/publicIPAddresses/APIGateway-ip",
+            "type": "String"
+        },
+        "publicIPAddresses_APIGateway2_ip_externalid": {
+            "defaultValue": "/subscriptions/b886a613-960a-4443-9742-410e4d353835/resourceGroups/DFSP2OpenBank/providers/Microsoft.Network/publicIPAddresses/APIGateway2-ip",
+            "type": "String"
+        },
+        "publicIPAddresses_fineract_ip_externalid": {
+            "defaultValue": "/subscriptions/b886a613-960a-4443-9742-410e4d353835/resourceGroups/Fineract1.x/providers/Microsoft.Network/publicIPAddresses/fineract-ip",
+            "type": "String"
+        }
+    },
+    "variables": {},
+    "resources": [
+        {
+            "type": "Microsoft.Network/dnszones",
+            "apiVersion": "2018-05-01",
+            "name": "[parameters('dnszones_mifos.io_name')]",
+            "location": "global",
+            "properties": {
+                "zoneType": "Public"
+            }
+        },
+        {
+            "type": "Microsoft.Network/dnszones/A",
+            "apiVersion": "2018-05-01",
+            "name": "[concat(parameters('dnszones_mifos.io_name'), '/*')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/dnszones', parameters('dnszones_mifos.io_name'))]"
+            ],
+            "properties": {
+                "TTL": 3600,
+                "ARecords": [
+                    {
+                        "ipv4Address": "20.185.209.74"
+                    }
+                ],
+                "targetResource": {}
+            }
+        },
+        {
+            "type": "Microsoft.Network/dnszones/A",
+            "apiVersion": "2018-05-01",
+            "name": "[concat(parameters('dnszones_mifos.io_name'), '/account-oracle')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/dnszones', parameters('dnszones_mifos.io_name'))]"
+            ],
+            "properties": {
+                "TTL": 3600,
+                "targetResource": {
+                    "id": "[parameters('publicIPAddresses_FneractCN_ip_externalid')]"
+                }
+            }
+        },
+        {
+            "type": "Microsoft.Network/dnszones/A",
+            "apiVersion": "2018-05-01",
+            "name": "[concat(parameters('dnszones_mifos.io_name'), '/acefintech')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/dnszones', parameters('dnszones_mifos.io_name'))]"
+            ],
+            "properties": {
+                "TTL": 3600,
+                "targetResource": {
+                    "id": "[parameters('publicIPAddresses_APIGateway_ip_externalid')]"
+                }
+            }
+        },
+        {
+            "type": "Microsoft.Network/dnszones/A",
+            "apiVersion": "2018-05-01",
+            "name": "[concat(parameters('dnszones_mifos.io_name'), '/api.elephant')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/dnszones', parameters('dnszones_mifos.io_name'))]"
+            ],
+            "properties": {
+                "TTL": 3600,
+                "targetResource": {
+                    "id": "[parameters('publicIPAddresses_APIGateway2_ip_externalid')]"
+                }
+            }
+        },
+        {
+            "type": "Microsoft.Network/dnszones/A",
+            "apiVersion": "2018-05-01",
+            "name": "[concat(parameters('dnszones_mifos.io_name'), '/api.lion')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/dnszones', parameters('dnszones_mifos.io_name'))]"
+            ],
+            "properties": {
+                "TTL": 3600,
+                "targetResource": {
+                    "id": "[parameters('publicIPAddresses_APIGateway_ip_externalid')]"
+                }
+            }
+        },
+        {
+            "type": "Microsoft.Network/dnszones/A",
+            "apiVersion": "2018-05-01",
+            "name": "[concat(parameters('dnszones_mifos.io_name'), '/buffalo')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/dnszones', parameters('dnszones_mifos.io_name'))]"
+            ],
+            "properties": {
+                "TTL": 3600,
+                "targetResource": {
+                    "id": "[parameters('publicIPAddresses_fineract_ip_externalid')]"
+                }
+            }
+        },
+        {
+            "type": "Microsoft.Network/dnszones/A",
+            "apiVersion": "2018-05-01",
+            "name": "[concat(parameters('dnszones_mifos.io_name'), '/dfsp1')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/dnszones', parameters('dnszones_mifos.io_name'))]"
+            ],
+            "properties": {
+                "TTL": 3600,
+                "targetResource": {
+                    "id": "[parameters('publicIPAddresses_APIGateway_ip_externalid')]"
+                }
+            }
+        },
+        {
+            "type": "Microsoft.Network/dnszones/A",
+            "apiVersion": "2018-05-01",
+            "name": "[concat(parameters('dnszones_mifos.io_name'), '/elephant')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/dnszones', parameters('dnszones_mifos.io_name'))]"
+            ],
+            "properties": {
+                "TTL": 3600,
+                "targetResource": {
+                    "id": "[parameters('publicIPAddresses_FneractCN_ip_externalid')]"
+                }
+            }
+        },
+        {
+            "type": "Microsoft.Network/dnszones/A",
+            "apiVersion": "2018-05-01",
+            "name": "[concat(parameters('dnszones_mifos.io_name'), '/fincn')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/dnszones', parameters('dnszones_mifos.io_name'))]"
+            ],
+            "properties": {
+                "TTL": 3600,
+                "targetResource": {
+                    "id": "[parameters('publicIPAddresses_FneractCN_ip_externalid')]"
+                }
+            }
+        },
+        {
+            "type": "Microsoft.Network/dnszones/A",
+            "apiVersion": "2018-05-01",
+            "name": "[concat(parameters('dnszones_mifos.io_name'), '/fineract')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/dnszones', parameters('dnszones_mifos.io_name'))]"
+            ],
+            "properties": {
+                "TTL": 3600,
+                "targetResource": {
+                    "id": "[parameters('publicIPAddresses_fineract_ip_externalid')]"
+                }
+            }
+        },
+        {
+            "type": "Microsoft.Network/dnszones/A",
+            "apiVersion": "2018-05-01",
+            "name": "[concat(parameters('dnszones_mifos.io_name'), '/lion')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/dnszones', parameters('dnszones_mifos.io_name'))]"
+            ],
+            "properties": {
+                "TTL": 3600,
+                "targetResource": {
+                    "id": "[parameters('publicIPAddresses_fineract_ip_externalid')]"
+                }
+            }
+        },
+        {
+            "type": "Microsoft.Network/dnszones/A",
+            "apiVersion": "2018-05-01",
+            "name": "[concat(parameters('dnszones_mifos.io_name'), '/paymenthub')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/dnszones', parameters('dnszones_mifos.io_name'))]"
+            ],
+            "properties": {
+                "TTL": 3600,
+                "targetResource": {
+                    "id": "[parameters('publicIPAddresses_fineract_ip_externalid')]"
+                }
+            }
+        },
+        {
+            "type": "Microsoft.Network/dnszones/A",
+            "apiVersion": "2018-05-01",
+            "name": "[concat(parameters('dnszones_mifos.io_name'), '/paymenthubcn')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/dnszones', parameters('dnszones_mifos.io_name'))]"
+            ],
+            "properties": {
+                "TTL": 3600,
+                "targetResource": {
+                    "id": "[parameters('publicIPAddresses_FneractCN_ip_externalid')]"
+                }
+            }
+        },
+        {
+            "type": "Microsoft.Network/dnszones/A",
+            "apiVersion": "2018-05-01",
+            "name": "[concat(parameters('dnszones_mifos.io_name'), '/rhino')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/dnszones', parameters('dnszones_mifos.io_name'))]"
+            ],
+            "properties": {
+                "TTL": 3600,
+                "targetResource": {
+                    "id": "[parameters('publicIPAddresses_FneractCN_ip_externalid')]"
+                }
+            }
+        },
+        {
+            "type": "Microsoft.Network/dnszones/CNAME",
+            "apiVersion": "2018-05-01",
+            "name": "[concat(parameters('dnszones_mifos.io_name'), '/_bd90e92007b597bea8ec3d3183ca4e22')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/dnszones', parameters('dnszones_mifos.io_name'))]"
+            ],
+            "properties": {
+                "TTL": 3600,
+                "CNAMERecord": {
+                    "cname": "B58CF31A1995F4E359DF9E494678EEA1.502A5CAB7E21CA609AAEE9B0995B3EA4.h5VqgrG5nlU1C16tr5n5.comodoca.com"
+                },
+                "targetResource": {}
+            }
+        },
+        {
+            "type": "Microsoft.Network/dnszones/CNAME",
+            "apiVersion": "2018-05-01",
+            "name": "[concat(parameters('dnszones_mifos.io_name'), '/oldstar')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/dnszones', parameters('dnszones_mifos.io_name'))]"
+            ],
+            "properties": {
+                "TTL": 3600,
+                "CNAMERecord": {
+                    "cname": "_BD90E92007B597BEA8EC3D3183CA4E22.mifos.org"
+                },
+                "targetResource": {}
+            }
+        },
+        {
+            "type": "Microsoft.Network/dnszones/NS",
+            "apiVersion": "2018-05-01",
+            "name": "[concat(parameters('dnszones_mifos.io_name'), '/@')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/dnszones', parameters('dnszones_mifos.io_name'))]"
+            ],
+            "properties": {
+                "TTL": 172800,
+                "NSRecords": [
+                    {
+                        "nsdname": "ns1-08.azure-dns.com."
+                    },
+                    {
+                        "nsdname": "ns2-08.azure-dns.net."
+                    },
+                    {
+                        "nsdname": "ns3-08.azure-dns.org."
+                    },
+                    {
+                        "nsdname": "ns4-08.azure-dns.info."
+                    }
+                ],
+                "targetResource": {}
+            }
+        },
+        {
+            "type": "Microsoft.Network/dnszones/SOA",
+            "apiVersion": "2018-05-01",
+            "name": "[concat(parameters('dnszones_mifos.io_name'), '/@')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/dnszones', parameters('dnszones_mifos.io_name'))]"
+            ],
+            "properties": {
+                "TTL": 3600,
+                "SOARecord": {
+                    "email": "azuredns-hostmaster.microsoft.com",
+                    "expireTime": 2419200,
+                    "host": "ns1-08.azure-dns.com.",
+                    "minimumTTL": 300,
+                    "refreshTime": 3600,
+                    "retryTime": 300,
+                    "serialNumber": 1
+                },
+                "targetResource": {}
+            }
+        }
+    ]
+}

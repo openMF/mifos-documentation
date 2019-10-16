@@ -1,0 +1,21 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "dnszones_mifos.io_name": {
+            "value": null
+        },
+        "publicIPAddresses_FneractCN_ip_externalid": {
+            "value": null
+        },
+        "publicIPAddresses_APIGateway_ip_externalid": {
+            "value": null
+        },
+        "publicIPAddresses_APIGateway2_ip_externalid": {
+            "value": null
+        },
+        "publicIPAddresses_fineract_ip_externalid": {
+            "value": null
+        }
+    }
+}
