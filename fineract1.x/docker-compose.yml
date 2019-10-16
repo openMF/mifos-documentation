@@ -16,16 +16,20 @@
 # under the License.
 #
 
-version: '2'
+version: '3.4'
 services:
   fineractmysql:
     image: mysql:5.7
     volumes:
-      - ./fineract-db/docker:/docker-entrypoint-initdb.d
+      - ./fineract-db/docker:/docker-entrypoint-initdb.d:Z,ro
       - ./fineract-db/data:/var/lib/mysql
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost"]
+      timeout: 10s
+      retries: 10
     ports:
       - "3306:3306"
   fineract-server:
@@ -48,3 +52,11 @@ services:
     restart: always
     depends_on:
       - fineractmysql
+  openbanking-adapter:
+    build:
+      context: ../openbanking-adapter
+    restart: always
+    ports:
+      - 8080:80
+      - 62020:62021
+      - 62021:62021
