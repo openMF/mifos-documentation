@@ -54,8 +54,7 @@ SELECT id INTO @saving_prod_id FROM m_savings_product WHERE name = @saving_prod_
 SET @client_id = -1;
 SELECT id INTO @client_id FROM m_client WHERE fullname = @client_name;
 
-INSERT INTO `m_savings_account`
-(`account_no`, `external_id`, `client_id`, `group_id`, `product_id`, `field_officer_id`, `status_enum`,
+INSERT INTO `m_savings_account` (`account_no`, `external_id`, `client_id`, `group_id`, `product_id`, `field_officer_id`, `status_enum`,
  `sub_status_enum`, `account_type_enum`, `deposit_type_enum`, `submittedon_date`, `submittedon_userid`,
  `approvedon_date`, `approvedon_userid`, `activatedon_date`, `activatedon_userid`,
  `currency_code`, `currency_digits`, `currency_multiplesof`, `nominal_annual_interest_rate`,
@@ -64,7 +63,7 @@ INSERT INTO `m_savings_account`
  `allow_overdraft`, `account_balance_derived`, `min_required_balance`, `enforce_min_required_balance`,
  `version`, `withhold_tax`)
 VALUES (@saving_account_no, @saving_account_ext_id, @client_id, NULL, @saving_prod_id, NULL, 300, 0, 1, 100, ADDDATE(curdate(), -100),
-  NULL, ADDDATE(curdate(), -100), NULL, ADDDATE(curdate(), -100), NULL, 'TZS', 2, NULL, 1.000000, 1, 4, 1, -- 29. - 4
+  NULL, ADDDATE(curdate(), -100), NULL, ADDDATE(curdate(), -100), NULL, 'USD', 2, NULL, 1.000000, 1, 4, 1, 
   360, NULL, 1, 1, 100000000.000000, 0.000000, 1, 1, 0);
 
 -- interop_identifier
