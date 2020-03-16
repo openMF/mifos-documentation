@@ -1,3 +1,2 @@
-# mifos-io-configuration
+# Open Banking API via WS02 API Gateway
 
-Config files, postman queries, documentation for Mifos.io lab environment
