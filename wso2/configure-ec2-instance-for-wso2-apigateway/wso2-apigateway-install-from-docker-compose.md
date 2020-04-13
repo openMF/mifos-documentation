@@ -13,9 +13,9 @@ $ unzip docker-apim-2.6.0.3.zip -d ~
 Start delpoy application
 
 ```text
-$ sudo su -
-$ cd /home/ec2-user/docker-apim-2.6.0.3/docker-compose/apim-is-as-km-with-analytics/scripts/
-$ ./deploy.sh
+$ cd ~
+$ cd docker-apim-2.6.0.3/docker-compose/apim-is-as-km-with-analytics/scripts/
+$ sudo ./deploy.sh
 Do you have a WSO2 Subscription? (Y/N)n
 Creating network "apim-is-as-km-with-analytics_default" with the default driver
 Pulling mysql (mysql:5.7.19)...
@@ -101,7 +101,12 @@ For instructions to delete the created WSO2 product server setup, please see the
 **Modify docker-compose.yml file**
 
 We only add "/home/ec2-user/authenticationendpoint.war:/home/wso2carbon/wso2am-2.6.0/repository/deployment/server/webapps/authenticationendpoint.war" entry at api-manager/volumes section.  
-This modification enabling deploy from outside the modified authentication screens.
+This modification enabling deploy from outside the modified authentication screens.  
+You may increese startup time, for the follwing values or higher.  
+interval --&gt; 120s  
+timeout --&gt; 300s  
+start\_period --&gt; 300s  
+retries --&gt; 30
 
 ```yaml
 version: '2.3'
@@ -117,10 +122,10 @@ services:
     command: [--ssl=0]
     healthcheck:
       test: ["CMD", "mysqladmin" ,"ping", "-uroot", "-proot"]
-      interval: 30s
-      timeout: 60s
-      retries: 5
-      start_period: 80s
+      interval: 120s
+      timeout: 300s
+      retries: 30
+      start_period: 300s
   am-analytics:
     image: wso2/wso2am-analytics-worker:2.6.0
     ports:
@@ -128,10 +133,10 @@ services:
       - "9444:9444"
     healthcheck:
       test: ["CMD", "nc", "-z","localhost", "9091"]
-      interval: 10s
-      timeout: 120s
-      start_period: 80s
-      retries: 10
+      interval: 120s
+      timeout: 300s
+      start_period: 300s
+      retries: 30
     depends_on:
       mysql:
         condition: service_healthy
@@ -141,10 +146,10 @@ services:
     image: wso2/wso2is-km:5.7.0
     healthcheck:
       test: ["CMD", "curl", "-k", "-f", "https://localhost:9443/carbon/admin/login.jsp"]
-      interval: 10s
-      timeout: 120s
-      start_period: 100s
-      retries: 15
+      interval: 120s
+      timeout: 300s
+      start_period: 300s
+      retries: 30
     depends_on:
       mysql:
         condition: service_healthy
@@ -159,10 +164,10 @@ services:
     image: wso2/wso2am:2.6.0
     healthcheck:
       test: ["CMD", "curl", "-k", "-f", "https://localhost:9443/carbon/admin/login.jsp"]
-      interval: 10s
-      timeout: 120s
-      start_period: 100s
-      retries: 5
+      interval: 120s
+      timeout: 300s
+      start_period: 300s
+      retries: 30
     depends_on:
       mysql:
         condition: service_healthy

@@ -42,3 +42,13 @@
 
 * [Add bank user to demo application](how-to/add-bank-user-to-demo-application.md)
 
+## Confiure Azure Instance
+
+* [Installing docker & docker-compose](confiure-azure-instance/installing-docker-and-docker-compose.md)
+* [Installing JDK](confiure-azure-instance/installing-jdk.md)
+* [Installing git client](confiure-azure-instance/installing-git-client.md)
+* [Install unzip](confiure-azure-instance/install-unzip.md)
+* [Install tools to compile WebApp](confiure-azure-instance/install-tools-to-compile-webapp.md)
+* [Compile Server Apps](confiure-azure-instance/compile-server-apps.md)
+* [Compile WebApp](confiure-azure-instance/compile-webapp.md)
+
