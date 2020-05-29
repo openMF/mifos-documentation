@@ -5,7 +5,6 @@
 ## Payment Hub EE
 
 * [Overview](payment-hub-ee/overview.md)
-* [Operations UI](openMF/ph-ee-operations-web/blob/master/README.md)
 
 ## WSO2
 
