@@ -22,9 +22,3 @@ echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/source
 > sudo yarn add react-dom
 ```
 
-Compile FPP/TPP WebApp
-
-```text
-> sudo npm run build
-```
-
