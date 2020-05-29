@@ -1,4 +1,4 @@
-# Default passwords and urls
+# Default urls
 
 #### WSO2 Management console
 
@@ -7,8 +7,7 @@ https://api.lion.mlabs.dpc.hu:9443/carbon
 https://api.elephant.mlabs.dpc.hu:9443/carbon
 ```
 
-**Username:** admin  
-**Password:** admin
+**Username:** admin
 
 #### API Publisher
 
@@ -19,8 +18,7 @@ https://api.elephant.mlabs.dpc.hu:9443/publisher
 
 In this site Bank can publish their APIs.
 
-**Username:** admin  
-**Password:** admin
+**Username:** admin
 
 #### API Store aka Development portal
 

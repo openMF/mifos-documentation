@@ -10,7 +10,7 @@
 
 * [Configure EC2 instance for WSO2 APIGateway](wso2/configure-ec2-instance-for-wso2-apigateway/README.md)
   * [WSO2 APIGateway install from docker-compose](wso2/configure-ec2-instance-for-wso2-apigateway/wso2-apigateway-install-from-docker-compose.md)
-  * [Default passwords and urls](wso2/configure-ec2-instance-for-wso2-apigateway/default-passwords-and-urls.md)
+  * [Default urls](wso2/configure-ec2-instance-for-wso2-apigateway/default-passwords-and-urls.md)
 * [Setup OpenBanking API's](wso2/setup-openbanking-apis/README.md)
   * [How to import swagger file to API store](wso2/setup-openbanking-apis/how-to-import-swagger-file-to-api-store.md)
   * [Account and Transaction API Specification - v3.1.2](wso2/setup-openbanking-apis/account-and-transaction-api-specification-v3.1.2.md)
