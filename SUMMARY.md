@@ -4,7 +4,7 @@
 
 ## Payment Hub EE
 
-* [Overview](Payment Hub/Overview.md)
+* [Overview](payment-hub-ee/overview.md)
 
 ## WSO2
 
