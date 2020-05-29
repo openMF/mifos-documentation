@@ -2,6 +2,10 @@
 
 * [Open Banking API via WS02 API Gateway](README.md)
 
+## Payment Hub EE
+
+* [Overview](Payment Hub/Overview.md)
+
 ## WSO2
 
 * [Configure EC2 instance for WSO2 APIGateway](wso2/configure-ec2-instance-for-wso2-apigateway/README.md)
@@ -42,7 +46,7 @@
 
 * [Add bank user to demo application](how-to/add-bank-user-to-demo-application.md)
 
-## Confiure Azure Instance
+## Configure Azure Instance
 
 * [Installing docker & docker-compose](confiure-azure-instance/installing-docker-and-docker-compose.md)
 * [Installing JDK](confiure-azure-instance/installing-jdk.md)
