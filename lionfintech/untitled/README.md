@@ -1,8 +1,10 @@
 # LionFintech FPP demo application
 
 You can find our project source code here:  
-Backend: [https://gitlab.com/dpchu/mojaloop-fineract/opb-api-gateway](https://gitlab.com/dpchu/mojaloop-fineract/opb-lionfintech)  
-GUI: [https://gitlab.com/dpchu/mojaloop-fineract/frontend-lionfintech](https://gitlab.com/dpchu/mojaloop-fineract/frontend-lionfintech)
+Backend: [https://github.com/openMF/openbanking-fpp-server](https://github.com/openMF/openbanking-fpp-server)  
+GUI: [https://github.com/openMF/openbanking-fpp-client](https://github.com/openMF/openbanking-fpp-client)
+
+Also check onlyonce pull requests.
 
 {% hint style="info" %}
 LionFintech application is derived from ACEFintech application.  
