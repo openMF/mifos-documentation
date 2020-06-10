@@ -6,6 +6,7 @@
 
 * [Overview](payment-hub-ee/overview/README.md)
   * [Source Code repositories](payment-hub-ee/overview/source-code-repositories.md)
+  * [Installation instructions](payment-hub-ee/overview/installation-instructions.md)
 
 ## WSO2
 
