@@ -4,7 +4,8 @@
 
 ## Payment Hub EE
 
-* [Overview](payment-hub-ee/overview.md)
+* [Overview](payment-hub-ee/overview/README.md)
+  * [Source Code repositories](payment-hub-ee/overview/source-code-repositories.md)
 
 ## WSO2
 
