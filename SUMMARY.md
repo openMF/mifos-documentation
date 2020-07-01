@@ -1,6 +1,7 @@
 # Table of contents
 
 * [Open Banking API via WS02 API Gateway](README.md)
+* [OpenBanking Adapter](openbanking-adapter.md)
 
 ## Payment Hub EE
 
