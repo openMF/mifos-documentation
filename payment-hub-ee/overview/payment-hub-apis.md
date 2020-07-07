@@ -6,7 +6,7 @@ description: >-
 
 # Payment Hub APIs
 
-__Initiate Payment__ \
+__Initiate Payment__
 ```text
 Url: http://{environment-channel-connector-domain}/channel/transfer
 Method: POST
@@ -34,7 +34,7 @@ Body:
 }
 ```
 
-__Query Payment Details__ \
+__Query Payment Details__
 ```text
 Url: http://{environment-channel-connector-domain}/channel/transfer/{transactionId}
 Method: GET
@@ -42,7 +42,7 @@ Headers:
   Platform-TenantId: {configured-tenantId-in-channel-connector}
 ```
 
-__Initiate Request To Pay__ \
+__Initiate Request To Pay__
 ```text
 Url: http://{environment-channel-connector-domain}/channel/transactionRequest
 Method: POST
@@ -70,7 +70,7 @@ Body:
 }
 ```
 
-__Register Secondary Identifier__ \
+__Register Secondary Identifier__
 ```text
 Url: http://{environment-channel-connector-domain}/channel/partyRegistration
 Method: POST
