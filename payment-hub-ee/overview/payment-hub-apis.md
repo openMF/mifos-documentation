@@ -1,12 +1,13 @@
 ---
 description: >-
-  The description of the payment hub APIs to initiate payment, query payment details, register MSISDN,
-  initiate request to pay.
+  The description of the payment hub APIs to initiate payment, query payment
+  details, register MSISDN, initiate request to pay.
 ---
 
 # Payment Hub APIs
 
-__Initiate Payment__
+**Initiate Payment**
+
 ```text
 Url: http://{environment-channel-connector-domain}/channel/transfer
 Method: POST
@@ -15,26 +16,27 @@ Headers:
   Content-Type: application/json
 Body:
 {
-	"payer": {
-		"partyIdInfo": {
-			"partyIdType": "MSISDN",
-			"partyIdentifier": "27710101999"
-		}
-	},
-	"payee": {
-		"partyIdInfo": {
-			"partyIdType": "MSISDN",
-			"partyIdentifier": "27710102999"
-		}
-	},
-	"amount": {
-		"amount": 230,
-		"currency": "TZS"
-	}
+    "payer": {
+        "partyIdInfo": {
+            "partyIdType": "MSISDN",
+            "partyIdentifier": "27710101999"
+        }
+    },
+    "payee": {
+        "partyIdInfo": {
+            "partyIdType": "MSISDN",
+            "partyIdentifier": "27710102999"
+        }
+    },
+    "amount": {
+        "amount": 230,
+        "currency": "TZS"
+    }
 }
 ```
 
-__Query Payment Details__
+**Query Payment Details**
+
 ```text
 Url: http://{environment-channel-connector-domain}/channel/transfer/{transactionId}
 Method: GET
@@ -42,7 +44,8 @@ Headers:
   Platform-TenantId: {configured-tenantId-in-channel-connector}
 ```
 
-__Initiate Request To Pay__
+**Initiate Request To Pay**
+
 ```text
 Url: http://{environment-channel-connector-domain}/channel/transactionRequest
 Method: POST
@@ -51,26 +54,27 @@ Headers:
   Content-Type: application/json
 Body:
 {
-	"payer": {
-		"partyIdInfo": {
-			"partyIdType": "MSISDN",
-			"partyIdentifier": "27710203999"
-		}
-	},
-	"payee": {
-		"partyIdInfo": {
-			"partyIdType": "MSISDN",
-			"partyIdentifier": "27710305999"
-		}
-	},
-	"amount": {
-		"amount": 77,
-		"currency": "TZS"
-	}
+    "payer": {
+        "partyIdInfo": {
+            "partyIdType": "MSISDN",
+            "partyIdentifier": "27710203999"
+        }
+    },
+    "payee": {
+        "partyIdInfo": {
+            "partyIdType": "MSISDN",
+            "partyIdentifier": "27710305999"
+        }
+    },
+    "amount": {
+        "amount": 77,
+        "currency": "TZS"
+    }
 }
 ```
 
-__Register Secondary Identifier__
+**Register Secondary Identifier**
+
 ```text
 Url: http://{environment-channel-connector-domain}/channel/partyRegistration
 Method: POST
@@ -84,3 +88,4 @@ Body:
   "idValue": "test@test.hu"
 }
 ```
+
