@@ -5,6 +5,15 @@ description: >-
 ---
 
 # Payment Hub APIs
+Configured domain for channel-connectors:
+* barebone: -
+* medium: med-connector-channel.mifos.io
+* large: -
+
+Configured tenants in lab environments:
+* barebone: tn03, tn04
+* medium: tn05, tn06
+* large: tn01
 
 **Initiate Payment** \
 Payer sends amount of money to payee.
