@@ -33,7 +33,10 @@ Body:
         "currency": "TZS"
     }
 }
-Response: transactionId of the started transfer
+Response:
+{
+    "transactionId":"84b34cfc-15ee-4646-902b-d92152028200"
+}
 ```
 
 **Query Payment Details** \
@@ -45,11 +48,11 @@ Headers:
   Platform-TenantId: {configured-tenantId-in-channel-connector}
 Response:
 {
-"clientRefId": "000000", -- possibly unknown client started it because it is not a required field in the request
-"completedTimestamp": "2020-07-06T18:58:46.883", -- possibly null field in case of not yet completed transfer
-"transactionId" : "84b34cfc-15ee-4646-902b-d92152028200",
-"transferState" : "RECEIVED",
-"transferId" : "b155e298-dd7f-4199-9636-fa5ebec2bc58" -- possibly null field, transfer code only captured after transfer sent
+    "clientRefId": "000000", -- possibly unknown client started it because it is not a required field in the request
+    "completedTimestamp": "2020-07-06T18:58:46.883", -- possibly null field in case of not yet completed transfer
+    "transactionId" : "84b34cfc-15ee-4646-902b-d92152028200",
+    "transferState" : "RECEIVED",
+    "transferId" : "b155e298-dd7f-4199-9636-fa5ebec2bc58" -- possibly null field, transfer code only captured after transfer sent
 }
 ```
 
@@ -80,7 +83,10 @@ Body:
         "currency": "TZS"
     }
 }
-Response: transactionId of the started transaction request
+Response:
+{
+    "transactionId":"84b34cfc-15ee-4646-902b-d92152028200"
+}
 ```
 
 **Register Secondary Identifier** \
