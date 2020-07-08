@@ -54,7 +54,7 @@ Response:
 ```
 
 **Initiate Request To Pay** \
-Payee asks payer to send amount of money. (currently without confirmation and authorization) The receiving DFSP of this request will be target of the transfer from the payer.
+Payee asks payer to send amount of money. (currently without confirmation and authorization) The receiving DFSP(payee) of this request will be target of the transfer from the payer.
 ```text
 Url: http://{environment-channel-connector-domain}/channel/transactionRequest
 Method: POST
