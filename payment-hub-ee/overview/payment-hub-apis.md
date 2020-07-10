@@ -111,7 +111,7 @@ Headers:
   Content-Type: application/json
 Body:
 {
-  "accountId":"9062b90de19b43989005",
+  "accountId":"9062b90de19b43989005", -- real savings account number, not external interoperation identifier
   "idType": "EMAIL",
   "idValue": "test@test.hu"
 }
