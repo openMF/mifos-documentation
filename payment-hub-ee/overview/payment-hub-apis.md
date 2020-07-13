@@ -10,7 +10,7 @@ Configured domain for channel-connectors:
 
 * barebone: -
 * medium: med-connector-channel.mifos.io
-* large: -
+* large: large-connector-channel.mifos.io
 
 Configured tenants in lab environments:
 
