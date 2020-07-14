@@ -1,0 +1,32 @@
+# Example
+
+Payer Process
+
+
+
+![Payer Process BPMN model](https://lh6.googleusercontent.com/sev-9FQkXg0cILYGphQ-VBr7_hENrAJiIxe9hBHEwdLwBrm8VxGTSrAXwIzMehbq8aBOD7x_PtsPXBdHmosRJXJ6_55Aq3wROprMtKhRM9VOucGCMUVZDMtSQXUZ6uusfWv_yy1fcQ4)
+
+
+
+![Payer Process in Production](https://lh3.googleusercontent.com/Y_xsK_dkw4czwUCMn9kjaAraHS7_fVdsqEEg1xa2gVMPhwzzkD-U32b9LPiYRS0JkkB5WTCQsn_HAAqxhn98o513Z1hdBv-7_VGwPXde43Z4RdomXBGy5bMW65sG28KSy1tPPqbUulg)
+
+
+
+![Payee Process BPMN](https://lh4.googleusercontent.com/NHseMrqkb7YThmLJj_SqkJSzVL0lYLD3Q8QkPHUcDs4-aZsYmw6ScK0aQJvljsJz_Ucu2WLCYHKG7G1jQmZ6v9Y0w3KKgHXTTbpsqqKM1nbhXKG7oD6lAQ6uPzFcJyFen9131AZNAmI)
+
+
+
+![Payee Process in Production](https://lh5.googleusercontent.com/OKdt8QryE_eL3DSALEdFBV6WLI9E4fVrYvrSzeOC9lTRFpvSXaY9rKgZEaucTcJsRmOqREQigjOTdNbEMnWH_J9D_EC8oEbOlPA8ASR1sJFHmuKea4LAGlvLZ6sby6YmvnpBWXguXUY)
+
+
+
+![Operations UI - Summary page](https://lh5.googleusercontent.com/Af92k2hpcEgwLP1f_cSEdXaodDHMO0BdlQS8IZecWpAyUbXhHYGDqfTGHkNooQX6MJfYw3CqRzPL0dMCdckF2PqNzjDjFV5ICS1GXGySOLzMdcx1ztFRPBW9LOdNKWqWP7rbrIhV5wY)
+
+
+
+![Operations UI - Transaction Details](https://lh4.googleusercontent.com/eSCLwMnEXMoAjetRFwDWER4f5LdXb-hei2TZwVcQqMncm8HHSZq1Wpb20WineK33jxjNA8FreXHEysbTyPd-ZYHDQHJAd1FI6zxMVCdr3J0rQFGlqY_VGzGg3B-ETvm1Y1nWT_kkLcc)
+
+
+
+![Transaction details on Kibana](https://lh3.googleusercontent.com/HcxyB5_cWitQqookCV4HySNNJ0LZc-rtbuvngXSzt2wdbWJRPLa7Y1GzXShYFL8Dzw0RL0bfuvOI9TTu_5XS2XzVsh3FfBEL-tgWphgezJvLfvXYM4w6dkBaL7zqUeFgN96P6Ux7LR8)
+

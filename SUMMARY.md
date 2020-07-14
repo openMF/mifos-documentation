@@ -43,6 +43,10 @@
 ## Payment Hub EE
 
 * [Overview](payment-hub-ee/overview/README.md)
+  * [Deployment models](payment-hub-ee/overview/deployment-models.md)
+  * [Microservices orchestration - Zeebee](payment-hub-ee/overview/microservices-orchestration-zeebee.md)
+  * [Lab environment](payment-hub-ee/overview/lab-environment.md)
+  * [Example](payment-hub-ee/overview/example.md)
   * [Secondary Identifier Storage and Registration](payment-hub-ee/overview/secondary-identifier-storage-and-registration.md)
   * [Payment Hub APIs](payment-hub-ee/overview/payment-hub-apis.md)
   * [Source Code repositories](payment-hub-ee/overview/source-code-repositories.md)
