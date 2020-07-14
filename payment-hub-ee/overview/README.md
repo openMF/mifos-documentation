@@ -1,4 +1,10 @@
-# Overview
+---
+description: >-
+  Information on the concept and implementation of the Payment Hub Enterprise
+  Edition
+---
+
+# Payment Hub EE Overview
 
 In this section, we'll provide an overview of the Payment Hub EE - the business requirements it supports, the architecture it's built on and the current status of the code.
 

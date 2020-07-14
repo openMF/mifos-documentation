@@ -42,7 +42,7 @@
 
 ## Payment Hub EE
 
-* [Overview](payment-hub-ee/overview/README.md)
+* [Payment Hub EE Overview](payment-hub-ee/overview/README.md)
   * [Deployment models](payment-hub-ee/overview/deployment-models.md)
   * [Microservices orchestration - Zeebee](payment-hub-ee/overview/microservices-orchestration-zeebee.md)
   * [Lab environment](payment-hub-ee/overview/lab-environment.md)
