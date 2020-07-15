@@ -13,5 +13,7 @@ In this environment we are having:
 
 In case you are interested to test out the environment please write to us, on the Mifos Slack on the \#paymenthub channel.
 
+Join Mifos Slack by clicking on this link: [https://join.slack.com/t/mifos/shared\_invite/zt-frxj913a-VdiJRCNp6M6S9is\_Aa2Ikg](https://join.slack.com/t/mifos/shared_invite/zt-frxj913a-VdiJRCNp6M6S9is_Aa2Ikg)
+
 ![Lab Environment in Azure](https://lh6.googleusercontent.com/P5m_Df95KholQ5eRgqmLJ-kLyCmcnVv9p5FAQNCjh0JJ1uHvWOxLNMpYgj5vTnAHgfeTz5w-h0kvb38LJgSH68iBTRdk1YxRSdVq67yQDlFVYpBXXeO23H8rMpttFBSkaTa3cft_z2c)
 

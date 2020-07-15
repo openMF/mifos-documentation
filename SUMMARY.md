@@ -47,6 +47,7 @@
   * [Benefits of Payment Hub EE](payment-hub-ee/business-overview/benefits-of-payment-hub-ee.md)
   * [Target Users of Payment Hub EE](payment-hub-ee/business-overview/target-users-of-payment-hub-ee.md)
   * [Using Payment Hub EE](payment-hub-ee/business-overview/using-payment-hub-ee.md)
+  * [Use cases](payment-hub-ee/business-overview/use-cases.md)
 * [Technical Overview](payment-hub-ee/overview/README.md)
   * [Deployment models](payment-hub-ee/overview/deployment-models.md)
   * [Microservices orchestration - Zeebee](payment-hub-ee/overview/microservices-orchestration-zeebee.md)
