@@ -42,7 +42,12 @@
 
 ## Payment Hub EE
 
-* [Payment Hub EE Overview](payment-hub-ee/overview/README.md)
+* [Business Overview](payment-hub-ee/business-overview/README.md)
+  * [Vision](payment-hub-ee/business-overview/vision.md)
+  * [Benefits of Payment Hub EE](payment-hub-ee/business-overview/benefits-of-payment-hub-ee.md)
+  * [Target Users of Payment Hub EE](payment-hub-ee/business-overview/target-users-of-payment-hub-ee.md)
+  * [Using Payment Hub EE](payment-hub-ee/business-overview/using-payment-hub-ee.md)
+* [Technical Overview](payment-hub-ee/overview/README.md)
   * [Deployment models](payment-hub-ee/overview/deployment-models.md)
   * [Microservices orchestration - Zeebee](payment-hub-ee/overview/microservices-orchestration-zeebee.md)
   * [Lab environment](payment-hub-ee/overview/lab-environment.md)
