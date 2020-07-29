@@ -11,7 +11,7 @@ With the Mojaloop connector that ships with Payment Hub EE, the following use ca
 * Peer to Peer Transfer via MSISDN
 * Merchant Proximity Payment via QR Code 
 * Merchant Request to Pay \(Payee-initiated transfer\)
-* Registration of Secondary Identifier
+* Registration of Secondary Identifier to an Account
 * Operation UI Monitoring and Actions
   * Incoming and outgoing transfers
   * Incoming and outgoing request to pay
