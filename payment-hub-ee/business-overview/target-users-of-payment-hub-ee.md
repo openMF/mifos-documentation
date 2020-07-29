@@ -6,6 +6,14 @@ Likewise shared service providers, aggregators, and integrators providing core b
 
 ## Current Use Cases Supported
 
+With the Mojaloop connector that ships with Payment Hub EE, the following use cases are supported:
+
+* Peer to Peer Transfer via MSISDN
+* Merchant Proximity Payment via QR Code 
+* Merchant Request to Pay \(Payee-initiated transfer\)
+* Registration of Secondary Identifier
+* Refund of Transaction 
+
 ## How is Payment Hub EE Currently Being Used
 
 ### **Connection for GSMA mobile money APIs**
@@ -14,7 +22,7 @@ Point of Integration with Mobile Money API for real-time synchronization with mo
 
 * Efforts are underway in the community to build Payment Hub EE connectors for MTN Uganda and Safaricom/M-Pesa in Kenya. ****
 
-### **Connection to Real-time Payment Systems**
+### **Connection to other Real-time Payment Systems**
 
 A number of partners are working on deploying the payment hub to provide a seamless point of integration with their local real-time payments system by building an additional connector into the Payment Hub EE. In Mexico, efforts are ongoing to build a connector to SPEI. Partners in Canada are exploring building an Interac connector and partners in Europe are exploring building a SEPA connector. Connection to other real-time payment systems like SEPA, SPEI, etc.
 
