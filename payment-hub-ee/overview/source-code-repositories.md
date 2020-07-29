@@ -18,8 +18,8 @@ The list of the Payment Hub EE repositories:
 | [ph-ee-exporter](https://github.com/openMF/ph-ee-exporter) | Zeebe exporter component which sends all data to Kafka |
 | [ph-ee-operations-app](https://github.com/openMF/ph-ee-operations-app) | Operations web application backend |
 | [ph-ee-operations-web](https://github.com/openMF/ph-ee-operations-web) | Operations web application frontend |
-| [ph-ee-env-template](https://github.com/openMF/ph-ee-env-template) | Environment templates for payment hub-ee |
-| [ph-ee-env-labs](https://github.com/openMF/ph-ee-env-labs) | Configurations of Lab Environment, BPMN flows, and Helm Charts |
+| [ph-ee-env-template](https://github.com/openMF/ph-ee-env-template) | Environment templates for payment hub-ee, BPMN flows |
+| [ph-ee-env-labs](https://github.com/openMF/ph-ee-env-labs) | Configurations of Lab Environment and Helm Charts |
 | [ph-ee-importer-es](https://github.com/openMF/ph-ee-importer-es) | Microservice consuming Kafka and sends all Zeebe-related data to ES |
 | [ph-ee-importer-rdbms](https://github.com/openMF/ph-ee-importer-rdbms) | Microservice consuming Kafka and feeding the off-site RDMS with business data of the flows |
 | [ph-ee-identity-provider](https://github.com/openMF/ph-ee-identity-provider) | Identity provider microservice |
