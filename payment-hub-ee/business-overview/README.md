@@ -1,6 +1,6 @@
 # Business Overview
 
-The payment hub is a gateway and integration layer enabling financial institutions \(DFSPs\) to seamlessly connect to external payment systems and manage and monitor the transactions flowing through these systems. 
+Payment Hub EE is a gateway and integration layer enabling financial institutions \(DFSPs\) to seamlessly connect to external payment systems and operational control center to manage and monitor the transactions flowing through these systems.
 
 It is built with a highly extensible and modular architecture, allowing additional connectors to be built for different payment systems, channels, and core banking systems. It is completely open source under the Mozilla Public License 2.0, enabling third parties to extend Payment Hub EE with additional features and/or distribute and support it as a commercial payment integration solution. 
 
