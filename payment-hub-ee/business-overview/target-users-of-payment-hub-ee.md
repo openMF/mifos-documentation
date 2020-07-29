@@ -4,7 +4,7 @@ Payment Hub EE is primarily intended for DFSPs to connect to and effectively par
 
 Likewise shared service providers, aggregators, and integrators providing core banking services and/or Mojaloop integration services will be a key user as they can leverage the multi-tenancy and scalability of the Payment Hub to provide a connection to multiple DFSPs.
 
-## Current Use Cases Supported
+## Current Mojaloop Use Cases Supported
 
 With the Mojaloop connector that ships with Payment Hub EE, the following use cases are supported:
 
@@ -12,7 +12,14 @@ With the Mojaloop connector that ships with Payment Hub EE, the following use ca
 * Merchant Proximity Payment via QR Code 
 * Merchant Request to Pay \(Payee-initiated transfer\)
 * Registration of Secondary Identifier
-* Refund of Transaction 
+* Operation UI Monitoring and Actions
+  * Incoming and outgoing transfers
+  * Incoming and outgoing request to pay
+  * Secondary identifier registration
+  * Refund of incoming transfer
+  * Manual Override
+
+
 
 ## How is Payment Hub EE Currently Being Used
 
