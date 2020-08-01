@@ -30,3 +30,17 @@ Payer Process
 
 ![Transaction details on Kibana](https://lh3.googleusercontent.com/HcxyB5_cWitQqookCV4HySNNJ0LZc-rtbuvngXSzt2wdbWJRPLa7Y1GzXShYFL8Dzw0RL0bfuvOI9TTu_5XS2XzVsh3FfBEL-tgWphgezJvLfvXYM4w6dkBaL7zqUeFgN96P6Ux7LR8)
 
+![Payee Party Lookup BPMN](../../.gitbook/assets/image%20%283%29.png)
+
+
+
+![Payer Transaction Request BPMN](../../.gitbook/assets/image.png)
+
+
+
+![Payee Transaction Request BPMN](../../.gitbook/assets/image%20%282%29.png)
+
+
+
+![Party Registration BPMN](../../.gitbook/assets/image%20%281%29.png)
+
