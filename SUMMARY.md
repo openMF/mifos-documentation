@@ -57,3 +57,7 @@
   * [Source Code repositories](payment-hub-ee/overview/source-code-repositories.md)
   * [Installation instructions](payment-hub-ee/overview/installation-instructions.md)
 
+## Mifos - Mojaloop
+
+* [Mifos Wallet Solution](mifos-mojaloop/mifos-wallet-solution.md)
+
