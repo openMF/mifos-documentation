@@ -1,3 +1,9 @@
+---
+description: >-
+  Connecting Wallet Management, Mifos (Apache Fineract) and the Mojaloop network
+  to a production ready solution for Digital Financial Service Providers
+---
+
 # Mifos Wallet Solution
 
 The Mifos Wallet solution makes use of Fineract 1.x as the core back end banking system with the Mifos User Interface\(s\) for operations and consumer interactions.
