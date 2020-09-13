@@ -10,5 +10,13 @@ The [Mifos Wallet App](https://github.com/openMF/mobile-wallet) connects via a W
 
 The API gateway built on WSO2 allows for new channel development on top of the Payment Hub EE.
 
-Diagram:
+![Wallet Management with Mifos - Fineract core banking platform, transact via the Mojaloop network](../.gitbook/assets/paymenthubv2-architecture-mifos-mojaloop-wallet.png)
+
+
+
+
+
+
+
+
 
