@@ -66,7 +66,7 @@ Showing the metrics for a complete test run of 10000 payment transactions:
 
 ![](../../.gitbook/assets/image%20%284%29.png)
 
-the number of parallely running workflow instances peaked over 5200 Zeebe workflows. All 10k payment transactions could finish within 3:15, hitting the average of **51 TPS**. 
+the number of parallelly running workflow instances peaked over 5200 Zeebe workflows. All 10k payment transactions could finish within 3:15, hitting the average of **51 TPS**. 
 
 Examining the event processing latencies on a Grafana heatmap \(darker boxes meaning large number of measured values in that timewindow\):
 
