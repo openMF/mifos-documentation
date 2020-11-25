@@ -101,7 +101,7 @@ Response:
 }
 ```
 
-**Register Secondary\(Interoperation\) Identifier** The secondary identifier will be registered to the account in FineractX\(FineractCN not yet implemented\), if it is connected to another account then it will be re-registered for the new account. It will be also registered in the Oracle system used by Mojaloop to lookup parties, same re-registration is used here.
+**Register Secondary\(Interoperation\) Identifier** The secondary identifier will be registered to the account in FineractX or FineractCN, if it is connected to another account then it will be re-registered for the new account. It will be also registered in the Oracle system used by Mojaloop to lookup parties, same re-registration is used here.
 
 ```text
 Url: http://{environment-channel-connector-domain}/channel/partyRegistration
