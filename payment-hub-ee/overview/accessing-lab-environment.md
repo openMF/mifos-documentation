@@ -62,20 +62,25 @@ Through the Ace Fintech app, one should now be able to initiate transfers via Mo
 
 Mifos Pay is a reference mobile wallet application. Below is an APK to download and the log-in credentials for a self-service user which is a customer of the Leopard DFSP instance.
 
-* APK Download
-* Credentials 
+* [APK Download of MifosPay](https://drive.google.com/file/d/1J6yDkFJC6aaPmvuAGDaqBs6Pvkct2vzr/view?usp=sharing)
+* Credentials: walletTester/password
 
 ### Through Mifos Mobile Mobile Banking App
 
 Mifos Mobile is a reference mobile banking application. Below is an APK to download and the log-in credentials for a self-service user which is a customer of the Leopard DFSP instance.
 
-* APK Download
-* Credentials 
+* [APK Download of Mifos Mobile](https://drive.google.com/file/d/1s539H9UXiaHtGIdmJgYxW16oPTvJT9Ge/view?usp=sharing)
+* Credentials: 299devansh/password
 
-Mojaloop APIs are documented at:
+### APIs to use via Postman 
 
-Payment Hub APIs are documented at: [https://mifos.gitbook.io/docs/payment-hub-ee/overview/payment-hub-apis](https://mifos.gitbook.io/docs/payment-hub-ee/overview/payment-hub-apis)  
-Mojaloop API
+Mojaloop APIs are documented at: [https://docs.google.com/spreadsheets/d/1b8BRajrpNacFNEH6gGENDVWIGusLc0pGRd6MnKbqTKM/edit\#gid=2019166841](https://docs.google.com/spreadsheets/d/1b8BRajrpNacFNEH6gGENDVWIGusLc0pGRd6MnKbqTKM/edit#gid=2019166841)
+
+Payment Hub APIs are documented at: [https://mifos.gitbook.io/docs/payment-hub-ee/overview/payment-hub-apis](https://mifos.gitbook.io/docs/payment-hub-ee/overview/payment-hub-apis)
+
+API Parameters:
+
+[https://docs.google.com/spreadsheets/d/1b8BRajrpNacFNEH6gGENDVWIGusLc0pGRd6MnKbqTKM/edit\#gid=1841201363](https://docs.google.com/spreadsheets/d/1b8BRajrpNacFNEH6gGENDVWIGusLc0pGRd6MnKbqTKM/edit#gid=1841201363)
 
 ## Viewing Transactions
 
