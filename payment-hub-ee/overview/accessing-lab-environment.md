@@ -118,7 +118,8 @@ az aks get-credentials --resource-group dpc-large-dfsp --name large-dfsp
   and follow the instructions given by the tool. Once this is set up, you can reach the environment from your developer box using `kubectl` or a more sophisticated tool like `k9s` (see https://k9scli.io/)
 * Port-forward the zeebe-operate Service's port `8080` to your local machine, using `kubectl` or `k9s`
 * Access Zeebe Operate's local endpoint at http://localhost:8080/. The default credentials are `demo/demo`.
-   
+
+#### Accessing Fineract 
   
 To access the user interface of the For fineract, highlight login urls, show APIs, this where pepl  
   
