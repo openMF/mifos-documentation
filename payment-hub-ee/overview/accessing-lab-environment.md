@@ -104,20 +104,21 @@ Log into the respective apps and view transaction details or click into a specif
 
 #### Configuring New Workflows 
 
-New workflows routing transactions across different systems can be done through modifying the BPMN diagram and building/adding new connectors. 
+New workflows routing transactions across different systems can be done through modifying the BPMN diagram and building/adding new connectors. Once the BPMN file is created in Zeebe Modeler, it needs to get deployed to the Zeebe cluster of the related environment.
 
-To access this Zeebe Operate UI for the Payment Hub EE instance, please follow the below instructions:
+#### Accessing Zeebe Operate
 
-* Set up kubernetes access on your local machine
-* Port-forward the zeebe-operate pod's port 8080 to the local machine, using standard kubectl or k9s
-* You can then access then Operate on localhost:8080
+To access the Zeebe Operate UI in a Payment Hub EE instance, please follow the below instructions:
 
-  
-  
-  
-  
-  
-  
+* Ensure you have Azure credentials to access the AKS Kubernetes environment
+* Use the Azure CLI tools to set up kubernetes access on your local machine, with the following command (example shows the Large env configuration):
+```
+az aks get-credentials --resource-group dpc-large-dfsp --name large-dfsp
+```
+  and follow the instructions given by the tool. Once this is set up, you can reach the environment from your developer box using `kubectl` or a more sophisticated tool like `k9s` (see https://k9scli.io/)
+* Port-forward the zeebe-operate Service's port `8080` to your local machine, using `kubectl` or `k9s`
+* Access Zeebe Operate's local endpoint at http://localhost:8080/. The default credentials are `demo/demo`.
+   
   
 To access the user interface of the For fineract, highlight login urls, show APIs, this where pepl  
   
