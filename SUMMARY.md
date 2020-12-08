@@ -51,6 +51,7 @@
   * [Deployment models](payment-hub-ee/overview/deployment-models.md)
   * [Microservices orchestration - Zeebee](payment-hub-ee/overview/microservices-orchestration-zeebee.md)
   * [Lab environment](payment-hub-ee/overview/lab-environment.md)
+  * [Accessing Lab Environment](payment-hub-ee/overview/accessing-lab-environment.md)
   * [Example](payment-hub-ee/overview/example.md)
   * [Secondary Identifier Storage and Registration](payment-hub-ee/overview/secondary-identifier-storage-and-registration.md)
   * [Payment Hub APIs](payment-hub-ee/overview/payment-hub-apis.md)

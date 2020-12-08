@@ -23,7 +23,7 @@ The central place for Zeebe configuration is the `values.yaml` file of the Helm 
 
 ### Exporters
 
- During our loadtests, the Zeebe ElasticSearch exporter became a bottleneck soon. This component is enabled by default by the Zeebe Helm chart, so we needed to get rid of it. The following did the trick:
+During our loadtests, the Zeebe ElasticSearch exporter became a bottleneck soon. This component is enabled by default by the Zeebe Helm chart, so we needed to get rid of it. The following did the trick:
 
 ```text
 env:
@@ -53,26 +53,23 @@ Zeebe ships with a highly configurable backpressure algorithm, which helps to av
 env:
   - name: ZEEBE_BROKER_BACKPRESSURE_ENABLED
     value: "false"
-
 ```
 
 ## Performance measurements
 
-The demonstrated loadtest measurements took place in the Large Lab Environment on Azure AKS Kubernetes, running 4 nodes: `1x Standard_A2m_v2`, `3x Standard_D13_v2`. This turned out to be a relatively cost-saving approach while still providing plenty of resources for the Zeebe cluster. 
+The demonstrated loadtest measurements took place in the Large Lab Environment on Azure AKS Kubernetes, running 4 nodes: `1x Standard_A2m_v2`, `3x Standard_D13_v2`. This turned out to be a relatively cost-saving approach while still providing plenty of resources for the Zeebe cluster.
 
-Each broker used a node having 8 cpu Intel Xeon \(Skylake or higher\) cores and 56 Gib of memory. We scaled up the PHEE Channel Connector components to 6 replicas in the Deployment, and provided the load from 3 different hosts through the k8s Ingresses. The Payment Hub had both the Mojaloop and AMS connectors effectively disabled through the ConfigMap settings, to allow measuring the PHEE performance isolated, without any external, possibly slower dependent components. We also applied all configuration suggestions from this page. 
+Each broker used a node having 8 cpu Intel Xeon \(Skylake or higher\) cores and 56 Gib of memory. We scaled up the PHEE Channel Connector components to 6 replicas in the Deployment, and provided the load from 3 different hosts through the k8s Ingresses. The Payment Hub had both the Mojaloop and AMS connectors effectively disabled through the ConfigMap settings, to allow measuring the PHEE performance isolated, without any external, possibly slower dependent components. We also applied all configuration suggestions from this page.
 
 Showing the metrics for a complete test run of 10000 payment transactions:
 
 ![](../../.gitbook/assets/image%20%284%29.png)
 
-the number of parallelly running workflow instances peaked over 5200 Zeebe workflows. All 10k payment transactions could finish within 3:15, hitting the average of **51 TPS**. 
+the number of parallelly running workflow instances peaked over 5200 Zeebe workflows. All 10k payment transactions could finish within 3:15, hitting the average of **51 TPS**.
 
 Examining the event processing latencies on a Grafana heatmap \(darker boxes meaning large number of measured values in that timewindow\):
 
 ![](../../.gitbook/assets/image%20%286%29.png)
 
-we conclude that highest number of events finished in the 100-250ms range. 
-
-
+we conclude that highest number of events finished in the 100-250ms range.
 
