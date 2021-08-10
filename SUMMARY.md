@@ -58,6 +58,8 @@
   * [Source Code repositories](payment-hub-ee/overview/source-code-repositories.md)
   * [Installation instructions](payment-hub-ee/overview/installation-instructions.md)
   * [Tuning and performance](payment-hub-ee/overview/tuning-and-performance.md)
+  * [Payment Process Overview](payment-hub-ee/overview/payment-process-overview.md)
+  * [Development Environment](payment-hub-ee/overview/development-environment.md)
 
 ## Mifos - Mojaloop
 
