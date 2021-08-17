@@ -50,6 +50,8 @@
 * [Technical Overview](payment-hub-ee/overview/README.md)
   * [Deployment models](payment-hub-ee/overview/deployment-models.md)
   * [Microservices orchestration - Zeebee](payment-hub-ee/overview/microservices-orchestration-zeebee.md)
+  * [An introductory Zeebe project \(Getting started\)](payment-hub-ee/overview/an-introductory-zeebe-project.md)
+  * [An introductory Zeebe project \(How it works\)](payment-hub-ee/overview/an-introductory-zeebe-project-how-it-works.md)
   * [Lab environment](payment-hub-ee/overview/lab-environment.md)
   * [Accessing Lab Environment](payment-hub-ee/overview/accessing-lab-environment.md)
   * [Example](payment-hub-ee/overview/example.md)
