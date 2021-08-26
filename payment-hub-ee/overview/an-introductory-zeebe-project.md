@@ -55,14 +55,16 @@ services:
       - ZEEBE_LOG_LEVEL=debug
       - ZEEBE_BROKER_EXPORTERS_KAFKA_CLASSNAME=hu.dpc.rt.kafkastreamer.exporter.KafkaExporter
       - ZEEBE_BROKER_EXPORTERS_KAFKA_JARPATH=/exporter.jar
+      - ZEEBE_BROKER_EXPORTERS_ELASTICSEARCH_JARPATH=/exporter.jar
+      - ZEEBE_BROKER_EXPORTERS_ELASTICSEARCH_CLASSNAME=hu.dpc.rt.kafkastreamer.exporter.NoOpExporter
     ports:
       - "26500:26500"
       - "9600:9600"
     volumes:
-      - zeebe_data:/usr/local/zeebe/data
+      - zeebe_data:/usr/local/zeebe/data 
       - ./application.yaml:/usr/local/zeebe/config/application.yaml
-      - [YOUR PATH FOR exporter-1.0.0-SNAPSHOT.jar GOES HERE]:/exporter.jar
-      - [YOUR PATH FOR kafka-clients-2.4.0.jar GOES HERE]:/usr/local/zeebe/lib/kafka-clients-2.4.0.jar
+      - [INSERT ABSOLUTE PATH OF kafka-clients-2.4.0.jar HERE]:/usr/local/zeebe/lib/kafka-clients-2.4.0.jar
+      - [INSERT ABSOLUTE PATH OF exporter-1.0.0-SNAPSHOT.jar HERE]:/exporter.jar
     depends_on:
       - elasticsearch
     networks:
@@ -105,19 +107,33 @@ services:
     container_name: kafka
     image: docker.io/bitnami/kafka:2
     ports:
-      - "9092:9092"
+      - "9094:9094"
     volumes:
       - "kafka_data:/bitnami"
     environment:
       - KAFKA_CFG_ZOOKEEPER_CONNECT=zookeeper:2181
       - ALLOW_PLAINTEXT_LISTENER=yes
+      - KAFKA_LISTENERS=INTERNAL://kafka:9092,OUTSIDE://kafka:9094
+      - KAFKA_ADVERTISED_LISTENERS=INTERNAL://kafka:9092,OUTSIDE://localhost:9094
+      - KAFKA_LISTENER_SECURITY_PROTOCOL_MAP=INTERNAL:PLAINTEXT,OUTSIDE:PLAINTEXT
+      - KAFKA_INTER_BROKER_LISTENER_NAME=INTERNAL
     depends_on:
       - zookeeper
     networks:
       - zeebe_network
+  db:
+    image: postgres
+    environment:
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=testdb
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
 ```
 
-8. Replace lines 27 and 28 with the absolute path of exporter-1.0.0- SNAPSHOT.jar and kafka-clients-2.4.0.jar on your computer, in the indicated positions
+8. Replace lines 29 and 30 with the absolute path of exporter-1.0.0- SNAPSHOT.jar and kafka-clients-2.4.0.jar on your computer, in the indicated positions
 
 9. Start docker within zeebe-docker-compose/operate with the force-recreate option enabled to ensure docker runs with the new docker- compose.yml file
 
@@ -129,7 +145,7 @@ $ docker-compose up --force-recreate
 
 10. Install [Kafka Tool](https://www.kafkatool.com/)
 
-11. Add a new cluster, with Kafka Cluster Version 2.4. Zookeeper Host should be localhost and Zookeeper Port should be 2181
+11. Add a new cluster, with Kafka Cluster Version 2.4. Zookeeper Host should be localhost and Zookeeper Port should be 2181. In advanced settings, set broker to localhost:9094.
 
 ### Running the Zeebe demo
 
