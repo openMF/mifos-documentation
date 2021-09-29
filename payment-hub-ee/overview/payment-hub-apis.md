@@ -6,6 +6,16 @@ description: >-
 
 # Payment Hub APIs
 
+### SwaggerHub Links
+
+{% embed url="https://app.swaggerhub.com/apis/rrkas/open-g\_2\_p\_erp/1.0" caption="OpenG2P APIs" %}
+
+{% embed url="https://app.swaggerhub.com/apis/myapi943/payment-hub\_ap\_is/1.0" caption="Payment Hub APIs" %}
+
+{% embed url="https://app.swaggerhub.com/apis/rrkas/mobile-money\_simulator\_api/1.0" caption="Mobile Money Simulator APIs" %}
+
+{% embed url="https://app.swaggerhub.com/apis/rrkas/fineract/1.0" caption="Fineract APIs" %}
+
 Configured domain for channel-connectors:
 
 * barebone: -
@@ -117,16 +127,6 @@ Body:
 }
 Response: empty
 ```
-
-### SwaggerHub Links
-
-{% embed url="https://app.swaggerhub.com/apis/rrkas/fineract/1.0" caption="Fineract APIs" %}
-
-{% embed url="https://app.swaggerhub.com/apis/rrkas/mobile-money\_simulator\_api/1.0" caption="Mobile Money Simulator APIs" %}
-
-{% embed url="https://app.swaggerhub.com/apis/rrkas/open-g\_2\_p\_erp/1.0" caption="OpenG2P APIs" %}
-
-{% embed url="https://app.swaggerhub.com/apis/myapi943/payment-hub\_ap\_is/1.0" caption="Payment Hub APIs" %}
 
 
 
