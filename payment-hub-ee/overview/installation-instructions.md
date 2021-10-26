@@ -36,13 +36,13 @@ Depending on the actual configuration, the payment hub's Helm chart installs the
   * Kibana
   * Zeebe Operate monitoring UI
 
-Each of these components has a git repository in https://github.com/openMF, containing source code and Dockerfiles.
+Each of these components has a git repository in [https://github.com/openMF](https://github.com/openMF), containing source code and Dockerfiles.
 
 Each component will contain a Jenkinsfile containing tasks related to deployment. Refer to this to understand the build steps of each project.
 
-Most components will also have a Dockerfile. After building the image, you may wish to host these docker images in a local docker registry. This can be done using docker locally per https://docs.docker.com/registry/deploying/, once you make sure that whatever domain name you use is available via DNS, or a local entry in /etc/hosts.
+Most components will also have a Dockerfile. After building the image, you may wish to host these docker images in a local docker registry. This can be done using docker locally per [https://docs.docker.com/registry/deploying/](https://docs.docker.com/registry/deploying/), once you make sure that whatever domain name you use is available via DNS, or a local entry in /etc/hosts.
 
-If you wish to setup a local maven repository to host ph-ee-connector-common, this page describes how to set one up using nginx: https://stackoverflow.com/questions/13834141/create-local-maven-repository
+If you wish to setup a local maven repository to host ph-ee-connector-common, this page describes how to set one up using nginx: [https://stackoverflow.com/questions/13834141/create-local-maven-repository](https://docs.docker.com/registry/deploying/)
 
 Certainly all these components have various Kubernetes objects \(ReplicationSets, Services, Ingresses, etc\). The Helm chart wraps all this complexity into a single package and allows a single-command deployment, as we will see very soon.
 
@@ -52,7 +52,7 @@ For the first deployment attempt, we suggest taking one of the 3 Lab Environment
 
 ### ph-ee-engine
 
-The `ph-ee-engine` dependency is defined in https://github.com/openMF/ph-ee-env-template.
+The `ph-ee-engine` dependency is defined in [https://github.com/openMF/ph-ee-env-template](https://github.com/openMF/ph-ee-env-template)
 
 The lab environments depend on this component, and are configured to pull this from `http://jenkins.mifos.io:8082`. This can be operated locally by installing a custom host entry in your local hosts file (/etc/hosts on linux), and installing a local web server to serve the files.
 
@@ -81,7 +81,7 @@ Add these two entries to your /etc/hosts file. `x.x.x.x` should be replaced with
 x.x.x.x jenkins.mifos.io
 ```
 
-Inspect https://github.com/openMF/ph-ee-env-template/blob/master/helm/package.sh for build instructions, and customize the commands to suit your installation. Unless you are remotely pushing the files, you will not need to run scp. Only cp is needed in that case, however please ensure the web root directory (/usr/share/nginx/html) is updated to reflect your configuration. If using the nginx file above, it would be `/var/www/jenkinsmifos-helm`.
+Inspect [https://github.com/openMF/ph-ee-env-template/blob/master/helm/package.sh](https://github.com/openMF/ph-ee-env-template/blob/master/helm/package.sh) for build instructions, and customize the commands to suit your installation. Unless you are remotely pushing the files, you will not need to run scp. Only cp is needed in that case, however please ensure the web root directory (/usr/share/nginx/html) is updated to reflect your configuration. If using the nginx file above, it would be `/var/www/jenkinsmifos-helm`.
 
 Verify your results by doing `curl http://jenkins.mifos.io:8082/index.yaml` to download your index.yaml. If problems occur, check your web server logs.
 
