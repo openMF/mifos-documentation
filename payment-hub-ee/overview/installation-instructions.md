@@ -40,9 +40,46 @@ Certainly all these components have various Kubernetes objects \(ReplicationSets
 
 ## First deployment
 
+For the first deployment attempt, we suggest taking one of the 3 Lab Environments for a test-drive.
+
+### ph-ee-engine
+
+The `ph-ee-engine` dependency is defined in https://github.com/openMF/ph-ee-env-template.
+
+The lab environments depend on this component, and are configured to pull this from `http://jenkins.mifos.io:8082`. This can be operated locally by installing a custom host entry in your local hosts file (/etc/hosts on linux), and installing a local web server to serve the files.
+
+A sample nginx vhost file is provided:
+
+```
+server {
+        listen 8082;
+        listen [::]:8082;
+
+        root /var/www/jenkinsmifos-helm;
+
+        index index.html index.htm index.nginx-debian.html;
+
+        server_name _;
+
+        location / {
+                try_files $uri $uri/ =404;
+        }
+}
+```
+
+Add these two entries to your /etc/hosts file. `x.x.x.x` should be replaced with your network IP - as some kubernetes environments run inside a VM, they need a network reachable IP to connect to. Only specifying `127.0.0.1` would make that VM try to connect to itself, not the host which provides the charts.
+```
+127.0.0.1 jenkins.mifos.io
+x.x.x.x jenkins.mifos.io
+```
+
+Inspect https://github.com/openMF/ph-ee-env-template/blob/master/helm/package.sh for build instructions, and customize the commands to suit your installation. Unless you are remotely pushing the files, you will not need to run scp. Only cp is needed in that case, however please ensure the web root directory (/usr/share/nginx/html) is updated to reflect your configuration. If using the nginx file above, it would be `/var/www/jenkinsmifos-helm`.
+
+Verify your results by doing `curl http://jenkins.mifos.io:8082/index.yaml` to download your index.yaml. If problems occur, check your web server logs.
+
 ### Deploying the Helm chart
 
-For the first deployment attempt, we suggest taking one of the 3 Lab Environments for a test-drive. Deploying any of there is as simple as cloning the Labs repository, changing directory to eg. [https://github.com/openMF/ph-ee-env-labs/tree/master/helm/payment-hub-med](https://github.com/openMF/ph-ee-env-labs/tree/master/helm/payment-hub-med) and executing the command `helm install <release-name> .`, where release name is freely chosen, eg. `ph-ee-med`, in this case.
+Deploying any of there is as simple as cloning the Labs repository, changing directory to eg. [https://github.com/openMF/ph-ee-env-labs/tree/master/helm/payment-hub-med](https://github.com/openMF/ph-ee-env-labs/tree/master/helm/payment-hub-med), installing the dependencies with `helm dep up`, and executing the command `helm install <release-name> .`, where release name is freely chosen, eg. `ph-ee-med`, in this case.
 
 Upgrading an installation with changed or updated configuration parameters is possible with executing the command `helm upgrade <release-name>`.
 
