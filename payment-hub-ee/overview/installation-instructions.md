@@ -40,7 +40,7 @@ Each of these components has a git repository in [https://github.com/orgs/openMF
 
 Each component will contain a Jenkinsfile containing tasks related to deployment. Refer to this to understand the build steps of each project.
 
-Most components will also have a Dockerfile. After building the image, you may wish to host these docker images in a local docker registry. This can be done using docker locally per [https://docs.docker.com/registry/deploying/](https://docs.docker.com/registry/deploying/), once you make sure that whatever domain name you use is available via DNS, or a local entry in /etc/hosts.
+Most components will also have a Dockerfile. After building the image, you may wish to host these docker images in a local docker registry. This can be done using docker locally per [https://docs.docker.com/registry/deploying/](https://docs.docker.com/registry/deploying/), once you make sure that whatever domain name you use is available via DNS, or a local entry in /etc/hosts. This will mean replacing the images at 'paymenthubee.azurecr.io' in ph-ee-env-template with your own images.
 
 For ph-ee-connector-common, a dependency of several of the connector components, you must build and install to a maven repository.
 
