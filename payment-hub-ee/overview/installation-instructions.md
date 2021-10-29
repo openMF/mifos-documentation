@@ -42,7 +42,11 @@ Each component will contain a Jenkinsfile containing tasks related to deployment
 
 Most components will also have a Dockerfile. After building the image, you may wish to host these docker images in a local docker registry. This can be done using docker locally per [https://docs.docker.com/registry/deploying/](https://docs.docker.com/registry/deploying/), once you make sure that whatever domain name you use is available via DNS, or a local entry in /etc/hosts.
 
-If you wish to setup a local maven repository to host ph-ee-connector-common, this page describes how to set one up using nginx: [https://stackoverflow.com/questions/13834141/create-local-maven-repository](https://docs.docker.com/registry/deploying/)
+For ph-ee-connector-common, a dependency of several of the connector components, you must build and install to a maven repository.
+
+```bash
+mvn deploy install
+```
 
 Certainly all these components have various Kubernetes objects \(ReplicationSets, Services, Ingresses, etc\). The Helm chart wraps all this complexity into a single package and allows a single-command deployment, as we will see very soon.
 
