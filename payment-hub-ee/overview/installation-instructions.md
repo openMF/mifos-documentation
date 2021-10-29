@@ -36,7 +36,7 @@ Depending on the actual configuration, the payment hub's Helm chart installs the
   * Kibana
   * Zeebe Operate monitoring UI
 
-Each of these components has a git repository in [https://github.com/openMF](https://github.com/openMF), containing source code and Dockerfiles.
+Each of these components has a git repository in [https://github.com/orgs/openMF/repositories?q=ph-ee](https://github.com/orgs/openMF/repositories?q=ph-ee), containing source code and Dockerfiles.
 
 Each component will contain a Jenkinsfile containing tasks related to deployment. Refer to this to understand the build steps of each project.
 
