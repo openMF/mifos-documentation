@@ -12,8 +12,8 @@
   * [WSO2 authentication endpoint demo application](wso2-1/wso2-authentication-endpoint/README.md)
     * [Config, setup, build, deploy application](wso2-1/wso2-authentication-endpoint/config-setup-build-deploy-application-todo.md)
     * [web.xml](wso2-1/wso2-authentication-endpoint/web.xml.md)
-    * [oauth2\_authz.jsp and oauth2\_consent.jsp](wso2-1/wso2-authentication-endpoint/oauth2_authz.jsp-and-oauth2_consent.jsp.md)
-    * [uk.org.openbanking.v3\_1\_2 package](wso2-1/wso2-authentication-endpoint/uk.org.openbanking.v3_1_2-package.md)
+    * [oauth2\_authz.jsp and oauth2\_consent.jsp](wso2-1/wso2-authentication-endpoint/oauth2\_authz.jsp-and-oauth2\_consent.jsp.md)
+    * [uk.org.openbanking.v3\_1\_2 package](wso2-1/wso2-authentication-endpoint/uk.org.openbanking.v3\_1\_2-package.md)
     * [hu.dpc package](wso2-1/wso2-authentication-endpoint/hu.dpc-package.md)
   * [Signup and subscribe APIs as TPP/FPP](wso2-1/signup-and-subscribe-apis-as-tpp-fpp.md)
   * [How to add new bank user](wso2-1/how-to-add-new-bank-user.md)
@@ -50,8 +50,8 @@
 * [Technical Overview](payment-hub-ee/overview/README.md)
   * [Deployment models](payment-hub-ee/overview/deployment-models.md)
   * [Microservices orchestration - Zeebee](payment-hub-ee/overview/microservices-orchestration-zeebee.md)
-  * [An introductory Zeebe project \(Getting started\)](payment-hub-ee/overview/an-introductory-zeebe-project.md)
-  * [An introductory Zeebe project \(How it works\)](payment-hub-ee/overview/an-introductory-zeebe-project-how-it-works.md)
+  * [An introductory Zeebe project (Getting started)](payment-hub-ee/overview/an-introductory-zeebe-project.md)
+  * [An introductory Zeebe project (How it works)](payment-hub-ee/overview/an-introductory-zeebe-project-how-it-works.md)
   * [Lab environment](payment-hub-ee/overview/lab-environment.md)
   * [Accessing Lab Environment](payment-hub-ee/overview/accessing-lab-environment.md)
   * [Example](payment-hub-ee/overview/example.md)
@@ -62,8 +62,8 @@
   * [Tuning and performance](payment-hub-ee/overview/tuning-and-performance.md)
   * [Payment Process Overview](payment-hub-ee/overview/payment-process-overview.md)
   * [Development Environment](payment-hub-ee/overview/development-environment.md)
+  * [Bulk Disbursement Integration](payment-hub-ee/overview/bulk-disbursement-integration.md)
 
 ## Mifos - Mojaloop
 
 * [Mifos Wallet Solution](mifos-mojaloop/mifos-wallet-solution.md)
-

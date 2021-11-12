@@ -18,72 +18,72 @@ VALUES ('2293e2cf-1c54-38cf-9934-6be4e94e60f8', 'Lion', 'Lion', 'Lion Bank Ltd.'
 
 #### BANKS table structure
 
-**id**  
-UUID for identify a bank  
-eg: 2293e2cf-1c54-38cf-9934-6be4e94e60f8  
+**id**\
+****UUID for identify a bank\
+eg: 2293e2cf-1c54-38cf-9934-6be4e94e60f8\
 Use only internally. We just generate random UUID value.
 
-**name**  
-Name of the bank  
+**name**\
+****Name of the bank\
 eg: Lion
 
-**shortName**  
-Short name of the bank  
+**shortName**\
+****Short name of the bank\
 eg: Lion
 
-**longName**  
-Long name of the bank  
+**longName**\
+****Long name of the bank\
 eg: Lion Bank Ltd.
 
-**logoUrl**  
-url for the bank logo.  
-eg: /images/bank/lion.svg  
+**logoUrl**\
+****url for the bank logo.\
+eg: /images/bank/lion.svg\
 Bank logo images can found at GUI application.
 
-**tokenUrl**  
-OAuth token url  
+**tokenUrl**\
+OAuth token url\
 eg: https://api.lion.mlabs.dpc.hu:8243/token
 
-**accounts\_url**  
-Accounts API url, defined via Bank at Publisher site.  
+**accounts\_url**\
+Accounts API url, defined via Bank at Publisher site.\
 eg: https://api.lion.mlabs.dpc.hu:8243/open-banking/v3.1/aisp/v3.1.2
 
-**client\_id**  
-LionFintech application OAuth client id \(consumer key\).  
-eg: PttPN26uJLQgvRjSrhmh5ShaqZga  
-You can find at API Store. This value must be identical with WSO2 API Store values. 
+**client\_id**\
+****LionFintech application OAuth client id (consumer key).\
+eg: PttPN26uJLQgvRjSrhmh5ShaqZga\
+You can find at API Store. This value must be identical with WSO2 API Store values.&#x20;
 
-**client\_secret**  
-LionFintech application OAuth client secret \(consumer secret\).  
-eg: gUPRoq7QUgkuBkdLIkLc1d6fJhka  
-You can find at API Store. This value must be identical with WSO2 API Store values. 
+**client\_secret**\
+****LionFintech application OAuth client secret (consumer secret).\
+eg: gUPRoq7QUgkuBkdLIkLc1d6fJhka\
+You can find at API Store. This value must be identical with WSO2 API Store values.&#x20;
 
-**callback\_url**  
-LionFintech OAuth callback url. After user OAuth authorization, the WSO2 call this url. In OAuth calls we must provide this information too, based on OAuth standard.  
-eg: https://acefintech.mlabs.dpc.hu/lionfintech/customer/banks/authorize  
-You can find at API Store. This value must be identical with WSO2 API Store values. 
+**callback\_url**\
+****LionFintech OAuth callback url. After user OAuth authorization, the WSO2 call this url. In OAuth calls we must provide this information too, based on OAuth standard.\
+eg: https://acefintech.mlabs.dpc.hu/lionfintech/customer/banks/authorize\
+You can find at API Store. This value must be identical with WSO2 API Store values.&#x20;
 
-**userName**  
-LionFintech username at WSO2 API Store. This username must be identical that user which signed up at API Store.  
+**userName**\
+LionFintech username at WSO2 API Store. This username must be identical that user which signed up at API Store.\
 eg: lionfintech
 
-**authorize\_url**  
-OAuth authorization url.  
+**authorize\_url**\
+****OAuth authorization url.\
 eg: https://api.lion.mlabs.dpc.hu:8243/authorzize
 
-**payments\_url**  
-Payments API url, defined via Bank at Publisher site.  
+**payments\_url**\
+****Payments API url, defined via Bank at Publisher site.\
 eg: https://api.lion.mlabs.dpc.hu:8243/open-banking/v3.1/pisp/v3.1.2
 
-**gateway\_url**  
-Consent handler API url  
+**gateway\_url**\
+****Consent handler API url\
 eg: http://lion.mlabs.dpc.hu/accessschema/ob
 
 
 
 ## Create environment
 
-```text
+```
 cd ~
 mkdir lionfintech
 mkdir lionfintech/db
@@ -93,7 +93,7 @@ mkdir lionfintech/config
 ### Create and edit application.properties
 
 {% code title="lionfintech/config/application.properties" %}
-```text
+```
 #
 # This Source Code Form is subject to the terms of the Mozilla
 # Public License, v. 2.0. If a copy of the MPL was not distributed
@@ -128,9 +128,9 @@ logging.level.org.springframework.web.filter.CommonsRequestLoggingFilter=DEBUG
 ```
 {% endcode %}
 
-### Create startup script \(start\_lionfintech.sh\)
+### Create startup script (start\_lionfintech.sh)
 
-{% code title="start\_lionfintech.sh" %}
+{% code title="start_lionfintech.sh" %}
 ```bash
 $ nohup java -jar lionfintech/backend-0.0.1-SNAPSHOT.jar --spring.config.location=file:./lionfintech/config/ > lionfintech.log &
 ```
@@ -197,7 +197,7 @@ $ scp opb-lionfintech/target/backend-0.0.1-SNAPSHOT.jar acefintech.mlabs.dpc.hu:
 
 ## Start
 
-```text
+```
 $ ssh acefintech.mlabs.dpc.hu
 $ ./start_lionfintech.sh
 ```
@@ -206,7 +206,7 @@ $ ./start_lionfintech.sh
 
 Find the required process and terminate them.
 
-```text
+```
 $ ps -ef | grep lionfintech
 ec2-user 11573     1  6 12:11 pts/0    00:00:33 java -jar lionfintech/backend-0.0.1-SNAPSHOT.jar --spring.config.location=file:./lionfintech/config/
 ec2-user 11636 11326  0 12:19 pts/1    00:00:00 grep --color=auto lionfintech
@@ -216,9 +216,7 @@ $ kill 11573
 
 ## Watch log file
 
-```text
+```
 $ tail -f lionfintech.log
 ```
-
-
 

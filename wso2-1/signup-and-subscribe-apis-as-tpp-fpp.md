@@ -28,13 +28,13 @@ Signup process is almost same for TPP and FPP.
 
 ![Initial application screen](../.gitbook/assets/screenshot-from-2019-08-12-14-18-24.png)
 
-**Select "Edit" action for "DefaultApplication" and modify "Application name".**  
+**Select "Edit" action for "DefaultApplication" and modify "Application name".**\
 Token type must be "OAuth" in this demo.
 
 ![Edit Application infos](../.gitbook/assets/screenshot-from-2019-08-12-14-19-42.png)
 
-**Select "APIS" menu at left side.**  
-Maybe you can see the following APIs.
+**Select "APIS" menu at left side.**\
+****Maybe you can see the following APIs.
 
 ![APIs overview screen](../.gitbook/assets/screenshot-from-2019-08-12-14-23-19.png)
 
@@ -46,8 +46,8 @@ Maybe you can see the following APIs.
 
 ![Subscription successful](../.gitbook/assets/screenshot-from-2019-08-12-14-25-44.png)
 
-**Go back to APIS screen and subscribe to "PaymentInitiationAPI - v3.1.2".**  
-After subscribe APIs in the Application subscriptions screen you can see the following.
+**Go back to APIS screen and subscribe to "PaymentInitiationAPI - v3.1.2".**\
+****After subscribe APIs in the Application subscriptions screen you can see the following.
 
 ![Application subscriptions](../.gitbook/assets/screenshot-from-2019-08-12-14-27-11.png)
 
@@ -55,11 +55,11 @@ After subscribe APIs in the Application subscriptions screen you can see the fol
 
 ![Production keys screen before setup](../.gitbook/assets/screenshot-from-2019-08-12-14-28-53.png)
 
-**You must specify "Callback url"** where your application will handle OAuth callback requests, when returned after "bank user" authorized one of the consent screen while using TPP application or handle after login while using FPP application.  
+**You must specify "Callback url"** where your application will handle OAuth callback requests, when returned after "bank user" authorized one of the consent screen while using TPP application or handle after login while using FPP application.\
 If you change this callback url, you must change in your application to.
 
-**Click "Generate keys" to save changes.**  
-After keys generated you must see a similar screen.
+**Click "Generate keys" to save changes.**\
+****After keys generated you must see a similar screen.
 
 ![Overview screen after setup callback url](../.gitbook/assets/fireshot-capture-002-application-api.lion.mlabs.dpc.hu.png)
 
@@ -67,5 +67,4 @@ In this screen appearing to very imported fields "Consumer Key" and "Consumer Se
 
 If "Consumer Key", "Consumer Secret" or "Callback URL" will not same while call OAuth requests your requests will fail.
 
-Now you have got all information to get Access token and call Application level APIs \(eg. consent requests\).
-
+Now you have got all information to get Access token and call Application level APIs (eg. consent requests).

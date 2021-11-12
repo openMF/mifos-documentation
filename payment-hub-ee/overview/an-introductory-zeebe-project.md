@@ -1,4 +1,4 @@
-# An introductory Zeebe project \(Getting started\)
+# An introductory Zeebe project (Getting started)
 
 We have created a [Hello World Zeebe project](https://github.com/peterforis/zeebe-demo-dpc), to help familiarization for those new to working with Zeebe. The project implements a bpmn consisting of service and receive tasks, an exclusive gateway containing a conditional and default path, and a timeout event, resulting in a simple introduction to core concepts used in the various payment hub bpmn workflows.
 
@@ -8,33 +8,33 @@ Please follow the steps below to download and run the demo, or follow the instru
 
 ### Set up your enviroment
 
-1. Make sure you have [Docker](https://www.docker.com/) installed. If you don't, you can install it by following [their installation guide](https://docs.readthedocs.io/en/latest/development/install.html)
+1\. Make sure you have [Docker](https://www.docker.com) installed. If you don't, you can install it by following [their installation guide](https://docs.readthedocs.io/en/latest/development/install.html)
 
-2. Please ensure you can use docker compose
+2\. Please ensure you can use docker compose
 
-3. Clone the [**zeebe-docker-compose** repository](https://github.com/camunda-community-hub/zeebe-docker-compose) from github. This will allow you to run zeebe, camunda operate, kafka and elasticsearch in a docker container 
+3\. Clone the [**zeebe-docker-compose** repository](https://github.com/camunda-community-hub/zeebe-docker-compose) from github. This will allow you to run zeebe, camunda operate, kafka and elasticsearch in a docker container&#x20;
 
-```text
+```
 $ git clone https://github.com/camunda-community-hub/zeebe-docker-compose.git
 ```
 
- 4. Clone the [**ph-ee-exporter** repository](https://github.com/openMF/ph-ee-exporter) from github. This will allow you to send data to Kafka
+&#x20;4\. Clone the [**ph-ee-exporter** repository](https://github.com/openMF/ph-ee-exporter) from github. This will allow you to send data to Kafka
 
-```text
+```
 $ git clone https://github.com/openMF/ph-ee-exporter.git
 ```
 
-5. Run maven package in the ph-ee-exporter project, to generate a jar exporter-1.0.0-SNAPSHOT.jar and note the absolute path of this jar and kafka-clients-2.4.0.jar on your computer
+5\. Run maven package in the ph-ee-exporter project, to generate a jar exporter-1.0.0-SNAPSHOT.jar and note the absolute path of this jar and kafka-clients-2.4.0.jar on your computer
 
-6. Navigate to zeebe-docker-compose/operate
+6\. Navigate to zeebe-docker-compose/operate
 
-```text
+```
 $ cd zeebe-docker-compose/operate
 ```
 
-7. Replace the contents of the docker-compose.yml file with the following:
+7\. Replace the contents of the docker-compose.yml file with the following:
 
-```text
+```
 version: "2"
 
 networks:
@@ -133,53 +133,52 @@ services:
       - "5432:5432"
 ```
 
-8. Replace lines 29 and 30 with the absolute path of exporter-1.0.0- SNAPSHOT.jar and kafka-clients-2.4.0.jar on your computer, in the indicated positions
+8\. Replace lines 29 and 30 with the absolute path of exporter-1.0.0- SNAPSHOT.jar and kafka-clients-2.4.0.jar on your computer, in the indicated positions
 
-9. Start docker within zeebe-docker-compose/operate with the force-recreate option enabled to ensure docker runs with the new docker- compose.yml file
+9\. Start docker within zeebe-docker-compose/operate with the force-recreate option enabled to ensure docker runs with the new docker- compose.yml file
 
-```text
+```
 $ docker-compose up --force-recreate
 ```
 
- **The following steps are only necessary if you wish to use kafka-tool to view kafka messages:**
+&#x20;**The following steps are only necessary if you wish to use kafka-tool to view kafka messages:**
 
-10. Install [Kafka Tool](https://www.kafkatool.com/)
+10\. Install [Kafka Tool](https://www.kafkatool.com)
 
-11. Add a new cluster, with Kafka Cluster Version 2.4. Zookeeper Host should be localhost and Zookeeper Port should be 2181. In advanced settings, set broker to localhost:9094.
+11\. Add a new cluster, with Kafka Cluster Version 2.4. Zookeeper Host should be localhost and Zookeeper Port should be 2181. In advanced settings, set broker to localhost:9094.
 
 ### Running the Zeebe demo
 
-1. Clone the repository for the zeebe demo application
+1\. Clone the repository for the zeebe demo application
 
-```text
+```
 $ git clone https://github.com/peterforis/zeebe-demo-dpc.git
 ```
 
-2. Navigate to zeebe-docker-compose/operate
+2\. Navigate to zeebe-docker-compose/operate
 
-```text
+```
 $ cd zeebe-docker-compose/operate
 ```
 
-3. Start docker within zeebe-docker-compose/operate
+3\. Start docker within zeebe-docker-compose/operate
 
-```text
+```
 $ docker-compose up 
 ```
 
-4. Navigate to zeebe-docker-compose/bin
+4\. Navigate to zeebe-docker-compose/bin
 
-```text
+```
 $ cd zeebe-docker-compose/operate
 ```
 
-5. Note the absolute path of hello-process.bpmn in the zeebe-demo-dpc project on your computer
+5\. Note the absolute path of hello-process.bpmn in the zeebe-demo-dpc project on your computer
 
-6. Deploy bpmn:
+6\. Deploy bpmn:
 
-```text
+```
 $ ./zbctl deploy --insecure <ABSOLUTE PATH OF hello-process.bpmn GOES HERE>
 ```
 
-7. Run ZeebeDemoApplication
-
+7\. Run ZeebeDemoApplication

@@ -1,6 +1,6 @@
 # Target Users of Payment Hub EE
 
-Payment Hub EE is primarily intended for DFSPs to connect to and effectively participate in L1-aligned payment systems like Mojaloop. It provides an open source production-ready tool to directly connect to Mojaloop. 
+Payment Hub EE is primarily intended for DFSPs to connect to and effectively participate in L1-aligned payment systems like Mojaloop. It provides an open source production-ready tool to directly connect to Mojaloop.&#x20;
 
 Likewise shared service providers, aggregators, and integrators providing core banking services and/or Mojaloop integration services will be a key user as they can leverage the multi-tenancy and scalability of the Payment Hub to provide a connection to multiple DFSPs.
 
@@ -9,8 +9,8 @@ Likewise shared service providers, aggregators, and integrators providing core b
 With the Mojaloop connector that ships with Payment Hub EE, the following use cases are supported:
 
 * Peer to Peer Transfer via MSISDN
-* Merchant Proximity Payment via QR Code 
-* Merchant Request to Pay \(Payee-initiated transfer\)
+* Merchant Proximity Payment via QR Code&#x20;
+* Merchant Request to Pay (Payee-initiated transfer)
 * Registration of Secondary Identifier to an Account
 * Operation UI Monitoring and Actions
   * Incoming and outgoing transfers
@@ -25,9 +25,9 @@ With the Mojaloop connector that ships with Payment Hub EE, the following use ca
 
 ### **Connection for GSMA mobile money APIs**
 
-Point of Integration with Mobile Money API for real-time synchronization with mobile money transactions. Work is underway to integrate with the GSMA mobile money API standard as a reference implementation to support real-time synchronization of mobile money transactions affecting loan and savings accounts and Fineract and facilitate being able to initiate transactions via mobile money from the Mifos web and mobile interfaces. Integration with this standard OTT API for mobile money will serve as the blueprint for other mobile money connectors. 
+Point of Integration with Mobile Money API for real-time synchronization with mobile money transactions. Work is underway to integrate with the GSMA mobile money API standard as a reference implementation to support real-time synchronization of mobile money transactions affecting loan and savings accounts and Fineract and facilitate being able to initiate transactions via mobile money from the Mifos web and mobile interfaces. Integration with this standard OTT API for mobile money will serve as the blueprint for other mobile money connectors.&#x20;
 
-* Efforts are underway in the community to build Payment Hub EE connectors for MTN Uganda and Safaricom/M-Pesa in Kenya. ****
+* Efforts are underway in the community to build Payment Hub EE connectors for MTN Uganda and Safaricom/M-Pesa in Kenya.** **
 
 ### **Connection to other Real-time Payment Systems**
 
@@ -35,5 +35,4 @@ A number of partners are working on deploying the payment hub to provide a seaml
 
 
 
-##  
-
+## &#x20;

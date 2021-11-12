@@ -12,7 +12,7 @@ $ unzip docker-apim-2.6.0.3.zip -d ~
 
 Start delpoy application
 
-```text
+```
 $ cd ~
 $ cd docker-apim-2.6.0.3/docker-compose/apim-is-as-km-with-analytics/scripts/
 $ sudo ./deploy.sh
@@ -100,13 +100,13 @@ For instructions to delete the created WSO2 product server setup, please see the
 
 **Modify docker-compose.yml file**
 
-We only add "/home/ec2-user/authenticationendpoint.war:/home/wso2carbon/wso2am-2.6.0/repository/deployment/server/webapps/authenticationendpoint.war" entry at api-manager/volumes section.  
-This modification enabling deploy from outside the modified authentication screens.  
-You may increese startup time, for the follwing values or higher.  
-interval --&gt; 120s  
-timeout --&gt; 300s  
-start\_period --&gt; 300s  
-retries --&gt; 30
+We only add "/home/ec2-user/authenticationendpoint.war:/home/wso2carbon/wso2am-2.6.0/repository/deployment/server/webapps/authenticationendpoint.war" entry at api-manager/volumes section.\
+This modification enabling deploy from outside the modified authentication screens.\
+You may increese startup time, for the follwing values or higher.\
+interval --> 120s\
+timeout --> 300s\
+start\_period --> 300s\
+retries --> 30
 
 ```yaml
 version: '2.3'
@@ -187,11 +187,11 @@ services:
 
 ### Modify WSO2 config files
 
-**Modify carbon.xml**  
-Find the following lines and modify it.
+**Modify carbon.xml**\
+****Find the following lines and modify it.
 
 {% code title="docker-apim-2.6.0.3/docker-compose/apim-is-as-km-with-analytics/apim/repository/conf/carbon.xml" %}
-```text
+```
 <!--<HostName>api-manager</HostName>-->
 <!--<MgtHostName>api-manager</MgtHostName>-->
 ```
@@ -199,16 +199,16 @@ Find the following lines and modify it.
 
 Write here you full domain name. In our example api.lion.mlabs.dpc.hu
 
-```text
+```
 <HostName>api.lion.mlabs.dpc.hu</HostName>
 <MgtHostName>api.lion.mlabs.dpc.hu</MgtHostName>
 ```
 
-**Modify api-manager.xml**  
-Find the following entries and modify it to your full domain name.
+**Modify api-manager.xml**\
+****Find the following entries and modify it to your full domain name.
 
 {% code title="docker-apim-2.6.0.3/docker-compose/apim-is-as-km-with-analytics/apim/repository/conf/api-manager.xml" %}
-```text
+```
 <APIManager>
 ...
     <AuthManager>
@@ -223,4 +223,3 @@ Find the following entries and modify it to your full domain name.
         <ServerURL>https://api.lion.mlabs.dpc.hu:9443/services/</ServerURL>
 ```
 {% endcode %}
-

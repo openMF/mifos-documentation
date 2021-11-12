@@ -8,13 +8,21 @@ description: >-
 
 ### SwaggerHub Links
 
-{% embed url="https://app.swaggerhub.com/apis/rrkas/open-g\_2\_p\_erp/1.0" caption="OpenG2P APIs" %}
+{% embed url="https://app.swaggerhub.com/apis/rrkas/open-g_2_p_erp/1.0" %}
+OpenG2P APIs
+{% endembed %}
 
-{% embed url="https://app.swaggerhub.com/apis/myapi943/payment-hub\_ap\_is/1.0" caption="Payment Hub APIs" %}
+{% embed url="https://app.swaggerhub.com/apis/myapi943/payment-hub_ap_is/1.0" %}
+Payment Hub APIs
+{% endembed %}
 
-{% embed url="https://app.swaggerhub.com/apis/rrkas/mobile-money\_simulator\_api/1.0" caption="Mobile Money Simulator APIs" %}
+{% embed url="https://app.swaggerhub.com/apis/rrkas/mobile-money_simulator_api/1.0" %}
+Mobile Money Simulator APIs
+{% endembed %}
 
-{% embed url="https://app.swaggerhub.com/apis/rrkas/fineract/1.0" caption="Fineract APIs" %}
+{% embed url="https://app.swaggerhub.com/apis/rrkas/fineract/1.0" %}
+Fineract APIs
+{% endembed %}
 
 Configured domain for channel-connectors:
 
@@ -30,7 +38,7 @@ Configured tenants in lab environments:
 
 **Initiate Payment** Payer sends amount of money to payee.
 
-```text
+```
 Url: http://{environment-channel-connector-domain}/channel/transfer
 Method: POST
 Headers:
@@ -63,7 +71,7 @@ Response:
 
 **Query Payment Details** Check the details of an ongoing transfer, not the details of a transaction request.
 
-```text
+```
 Url: http://{environment-channel-connector-domain}/channel/transfer/{transactionId}
 Method: GET
 Headers:
@@ -78,9 +86,9 @@ Response:
 }
 ```
 
-**Initiate Request To Pay** Payee asks payer to send amount of money. \(currently without confirmation and authorization\) The receiving DFSP\(payee\) of this request will be target of the transfer from the payer.
+**Initiate Request To Pay** Payee asks payer to send amount of money. (currently without confirmation and authorization) The receiving DFSP(payee) of this request will be target of the transfer from the payer.
 
-```text
+```
 Url: http://{environment-channel-connector-domain}/channel/transactionRequest
 Method: POST
 Headers:
@@ -111,9 +119,9 @@ Response:
 }
 ```
 
-**Register Secondary\(Interoperation\) Identifier** The secondary identifier will be registered to the account in FineractX or FineractCN, if it is connected to another account then it will be re-registered for the new account. It will be also registered in the Oracle system used by Mojaloop to lookup parties, same re-registration is used here.
+**Register Secondary(Interoperation) Identifier** The secondary identifier will be registered to the account in FineractX or FineractCN, if it is connected to another account then it will be re-registered for the new account. It will be also registered in the Oracle system used by Mojaloop to lookup parties, same re-registration is used here.
 
-```text
+```
 Url: http://{environment-channel-connector-domain}/channel/partyRegistration
 Method: POST
 Headers:
@@ -127,6 +135,4 @@ Body:
 }
 Response: empty
 ```
-
-
 
