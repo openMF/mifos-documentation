@@ -105,10 +105,10 @@ tenants=([bb-dfsp]="tn03 tn04" [med-dfsp]="tn05 tn06" [large-dfsp]="tn01 tn02")
 PREV="DFSPID"
 for lab in large-dfsp; do 
     echo "using env $lab"
-  kubectx $lab
-  svc=`kubectl get pods | grep zeebe-zeebe-gateway | awk '{ print $1 }'`
-  kubectl port-forward $svc 26500:26500 &
-  sleep 1
+    kubectx $lab
+    svc=`kubectl get pods | grep zeebe-zeebe-gateway | awk '{ print $1 }'`
+    kubectl port-forward $svc 26500:26500 &
+    sleep 1
     for tenant in ${tenants[$lab]}; do 
         for bpmn in ./orchestration/feel/*.bpmn; do
             echo "processing bpmn: $(basename $bpmn) tenant: ${tenant} currently_replacing: ${PREV}"
