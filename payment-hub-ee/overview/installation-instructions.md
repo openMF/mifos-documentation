@@ -108,6 +108,7 @@ for lab in large-dfsp; do
     kubectx $lab
     svc=`kubectl get pods | grep zeebe-zeebe-gateway | awk '{ print $1 }'`
     kubectl port-forward $svc 26500:26500 &
+    forward_pid=$!
     sleep 1
     for tenant in ${tenants[$lab]}; do 
         for bpmn in ./orchestration/feel/*.bpmn; do
@@ -122,7 +123,7 @@ for lab in large-dfsp; do
     done
     PREV=${tenants[$lab]:5:4}
     echo "--- DONE environment ${lab} ---"
-    killall kubectl
+    kill -9 $forward_pid
 done
 ```
 
