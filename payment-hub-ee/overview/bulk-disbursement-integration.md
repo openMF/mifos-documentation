@@ -16,7 +16,7 @@
 
 ![](../../.gitbook/assets/Screen\_Shot\_2021-07-06\_at\_9.25.06\_PM.png)
 
-* Bulk processing designed as a separate system within Payment Hub EE architecture supporting
+* Bulk processing is designed as a separate system within Payment Hub EE architecture supporting
 * File integrity check with MD5/SHA256 checksum when received in channel connector
 * Bulk processor
   * Parse CSV file
@@ -26,12 +26,12 @@
 * Workflow Initiator
   * Pull messages from Kafka payments topic
   * Format data based on payment connector requirements
-  * Initiate payment type specific workflows
+  * Initiate payment type-specific workflows
 
 **Key Considerations:**
 
 * Kafka provides auto partitioning within topics based on throughput and data
-* Scalable and fault tolerant system provided by multi-cluster setup
+* Scalable and fault-tolerant system provided by the multi-cluster setup
 * Handle backpressure from Zeebe and throttle workflow initiation
   * Kafka will act as a buffer in this case
 * Advantageous when Zeebe is overloaded
@@ -41,15 +41,15 @@
 * Provide a visual workflow representation with Zeebe
 * Stores every state for workflow instances
 * Timers surviving node failures without interruptions
-* Using an efficient, high performance binary protocol (gRPC) for the clients to connect and receive tasks for execution
+* Using an efficient, high-performance binary protocol (gRPC) for the clients to connect and receive tasks for execution
 * Retry mechanism on the entire subprocess
   * But retry is already in place within subprocesses
 * Unified payment architecture
 * Easy integration with AMS if payment staging requires it
-  * Incase of beneficiary creation during transfer
+  * In case of beneficiary creation during transfer
 * Using Raft for log replication
-  * Kafka has write ahead log replication as well.
-* Easy integration of pre and post transaction workers
+  * Kafka to write ahead log replication as well.
+* Easy integration of pre and post-transaction workers
   * Such as bulk notification
 
 #### References:
