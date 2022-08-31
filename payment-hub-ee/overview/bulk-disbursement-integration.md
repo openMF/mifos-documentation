@@ -26,6 +26,22 @@
   * Format data based on payment connector requirements
   * Initiate payment type-specific workflows
 
+#### Configurations
+
+To provide a granular level of control, the bulk processor supports multiple configurations for different stages like ordering, formatting, splitting etc.
+
+* partylookup.enable: used to enable or disable the partylookup stage
+* approval.enable: used to enable or disable the approval stage
+* ordering.enable: used to enable or disable the ordering of transactions in a data set based on a field provided.
+* ordering.field: the field based on which ordering will be done.
+* formatting.enable: enable or disable the formatting of data set. If formatting is disabled the default formatting standard is used.
+* formatting.standard: the formatting standard to be used for transactions, possible values are "DEFAULT", "GSMA".
+* splitting.enable: enable or disable the splitting of the original csv file into sub-batches. Splitting is done on the sub-batch-size field configuration.&#x20;
+* splitting.sub-batch-size: the size of the single sub batch.
+* mergeback.enable: enable or disable the merging back of the sub batches result.
+* success-threshold-check.enable: enable or disable the success threshold check, use this configuration to make sure at least x percentage of transaction is successful in a batch.
+* success-threshold-check.success-rate: a percentage value that will be used while making the threshold check.
+
 **Key Considerations:**
 
 * Kafka provides auto partitioning within topics based on throughput and data
