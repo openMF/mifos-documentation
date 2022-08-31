@@ -10,10 +10,10 @@ Its extensibility and open source license enables integrators and solution provi
 
 Payment Hub EE provides a full operational control center to enable DFSPs to effectively participate in a real-time payment system.&#x20;
 
-* **Seamless & Easy to Use - **Payment Hub EE abstracts out the complexity of API integration drastically reducing the time for a DFSP to onboard onto a payment system**.**
-* **Operational Control Center - **Payment Hub EE is much more than just a tool to connect to the system - it provides a full operation control center enabling the DFSP to monitor, analyze, and respond to payment transactions in real-time at both a business and technical level.
+* **Seamless & Easy to Use -** Payment Hub EE abstracts out the complexity of API integration drastically reducing the time for a DFSP to onboard onto a payment system**.**
+* **Operational Control Center -** Payment Hub EE is much more than just a tool to connect to the system - it provides a full operation control center enabling the DFSP to monitor, analyze, and respond to payment transactions in real-time at both a business and technical level.
 
-### **Scalable & Enterprise-Grade **
+### **Scalable & Enterprise-Grade**&#x20;
 
 Payment Hub EE was designed and architected to support DFSPs large and small, with a highly scalable and fault-tolerant architecture to support large DFSPs and full multitenancy to easily onboard and support multiple DFSPs in a shared environment. &#x20;
 
@@ -30,7 +30,7 @@ With the Zeebe workflow engine at its core and the ability to build different co
 
 * **Core Banking System Agnostic** - While Payment Hub EE is built with a default account management system connector to Mifos/Fineract, it can connect to any core banking or account management system simply by building another connector.&#x20;
 * **Flexible Payment Bridge** - likewise, while Payment Hub EE ships with a Mojaloop connector by default and was built to connect to Level One-Aligned payment systems, it can connect to any other payment system simply by building additional connectors such as SEPA, SWIFT, ISO 20022, or any mobile money API. As the community around Payment Hub EE grows, the list of available connectors will as well.&#x20;
-* **Extensible Architecture - **Simply build additional connectors for your payments, core banking systems, or channel applications. Orchestrate these different microservices by creating new BPMN diagrams and Zeebe workers.&#x20;
+* **Extensible Architecture -** Simply build additional connectors for your payments, core banking systems, or channel applications. Orchestrate these different microservices by creating new BPMN diagrams and Zeebe workers.&#x20;
 
 ### **Powerful Workflow Engine for Microservices Orchestration**
 
@@ -46,9 +46,9 @@ Zeebe nicely documents the power of their workflow engine on the [_What is is Ze
 
 Payment Hub EE is built and developed under a permissive open source license enabling commercial integrators to extend it with proprietary features and functionality while accessing a continually maintained and evolved core architecture from the open source community.&#x20;
 
-* **Flexibility and Control - **DFSPs have full control over the Payment Hub EE and can extend it their requirements and are not locked into any one vendor the support their payment solutions.&#x20;
-* **Commercially Deployable - **Commercial integrators can lower the overall cost of delivering and distributing a robust, enterprise grade tool but building on top of Payment Hub EE additional proprietary and region-specific features.&#x20;
-* **Roadmap & Virtuous Cycle - **Everyone using and building on Payment Hub EE can benefit from the virtuous cycle of a global community collectively maintaining and contributing to Payment Hub EE. Roadmap will guide the community in implementing and incorporating new functionality and enhancements over time.&#x20;
+* **Flexibility and Control -** DFSPs have full control over the Payment Hub EE and can extend it their requirements and are not locked into any one vendor the support their payment solutions.&#x20;
+* **Commercially Deployable -** Commercial integrators can lower the overall cost of delivering and distributing a robust, enterprise grade tool but building on top of Payment Hub EE additional proprietary and region-specific features.&#x20;
+* **Roadmap & Virtuous Cycle -** Everyone using and building on Payment Hub EE can benefit from the virtuous cycle of a global community collectively maintaining and contributing to Payment Hub EE. Roadmap will guide the community in implementing and incorporating new functionality and enhancements over time.&#x20;
 
 
 

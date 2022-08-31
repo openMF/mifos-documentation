@@ -8,7 +8,7 @@ Please follow the steps below to download and run the demo, or follow the instru
 
 ### Set up your enviroment
 
-1\. Make sure you have [Docker](https://www.docker.com) installed. If you don't, you can install it by following [their installation guide](https://docs.readthedocs.io/en/latest/development/install.html)
+1\. Make sure you have [Docker](https://www.docker.com/) installed. If you don't, you can install it by following [their installation guide](https://docs.readthedocs.io/en/latest/development/install.html)
 
 2\. Please ensure you can use docker compose
 
@@ -143,7 +143,7 @@ $ docker-compose up --force-recreate
 
 &#x20;**The following steps are only necessary if you wish to use kafka-tool to view kafka messages:**
 
-10\. Install [Kafka Tool](https://www.kafkatool.com)
+10\. Install [Kafka Tool](https://www.kafkatool.com/)
 
 11\. Add a new cluster, with Kafka Cluster Version 2.4. Zookeeper Host should be localhost and Zookeeper Port should be 2181. In advanced settings, set broker to localhost:9094.
 

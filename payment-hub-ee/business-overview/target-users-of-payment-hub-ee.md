@@ -27,7 +27,7 @@ With the Mojaloop connector that ships with Payment Hub EE, the following use ca
 
 Point of Integration with Mobile Money API for real-time synchronization with mobile money transactions. Work is underway to integrate with the GSMA mobile money API standard as a reference implementation to support real-time synchronization of mobile money transactions affecting loan and savings accounts and Fineract and facilitate being able to initiate transactions via mobile money from the Mifos web and mobile interfaces. Integration with this standard OTT API for mobile money will serve as the blueprint for other mobile money connectors.&#x20;
 
-* Efforts are underway in the community to build Payment Hub EE connectors for MTN Uganda and Safaricom/M-Pesa in Kenya.** **
+* Efforts are underway in the community to build Payment Hub EE connectors for MTN Uganda and Safaricom/M-Pesa in Kenya. ****&#x20;
 
 ### **Connection to other Real-time Payment Systems**
 

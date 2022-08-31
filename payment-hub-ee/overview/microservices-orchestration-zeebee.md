@@ -7,7 +7,7 @@ Opensource microservice orchestration engine, implemented in highly scalable, hi
 * All process instances are auditable, and audit records can be sent to Elasticsearch or Kafka
 * Using an efficient, high performance binary protocol (gRPC) for the clients to connect and receive tasks for execution
 
-| ** Benefits**                               | Description                                                                                                             |
+|  **Benefits**                               | Description                                                                                                             |
 | ------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
 | Workflow definition                         | BPMN 2.0, YAML - provides integrators with an easy to use tool to customize workflows                                   |
 | Visual workflow representation              | Yes, BPMN workflows are both executable and have visual representation                                                  |

@@ -12,9 +12,7 @@
 
 #### Staging the Payment
 
-![](<../../.gitbook/assets/Screen\_Shot\_2021-07-06\_at\_9.12.10\_PM (1).png>)
-
-![](../../.gitbook/assets/Screen\_Shot\_2021-07-06\_at\_9.25.06\_PM.png)
+![](../../.gitbook/assets/bulk\_processor.png)
 
 * Bulk processing is designed as a separate system within Payment Hub EE architecture supporting
 * File integrity check with MD5/SHA256 checksum when received in channel connector
@@ -164,33 +162,33 @@ curl -X GET <https://ph.ee/channel/{payment_mode}/transfer>
 
 ### 3. Bulk Transfer
 
+{% file src="../../.gitbook/assets/ph-ee-bulk-demo-6.csv" %}
+File to be used with this request
+{% endfile %}
+
 ```bash
-curl -X POST <https://ph.ee/channel/bulk/transfer> \\
--H "Content-Type: multipart/form-data" \\
--F "data=@accounts.csv" -F "note=Bulk transfers" -F "checksum={hash}" -F "request_id={UUID}"
+curl --location --request POST 'https://bulk-connector.sandbox.fynarfin.io/bulk/transfer/3a4dfab5-0f4f-4e78-b6b5-1aff3859d4e8/ph-ee-bulk-demo-6.csv' \
+--header 'Platform-TenantId: ibank-usa' \
+--form 'data=@"ph-ee-bulk-demo-6.csv"'
 ```
 
 ```json
 {
-  "batch_id": "UUID",
-	"request_id": "UUID",
-	"notes": "Bulk transfers",
-  "status": "queued",
-  "purpose": "refund",
-  "failure_reason": null,
-  "created_at": 1545383037
+    "batch_id": "738bd830-3bd9-4511-bb42-3d0f5798e014",
+    "request_id": "3a4dfab5-0f4f-4e78-b6b5-1aff3859d4e8",
+    "status": "queued"
 }
 ```
 
 ### 4. Bulk Transfer Status
 
 ```bash
-curl -X GET <https://ph.ee/channel/bulk/transfer?batch_id={UUID}&detailed={true/false}>
-curl -X GET <https://ph.ee/channel/bulk/transfer?request_id={UUID}&detailed={true/false}>
+curl --location --request GET 'https://ops-bk.sandbox.fynarfin.io/api/v1/batch?batchId=3112a0ba-0733-4133-ae24-fc3310cb7dfe' \
+--header 'Platform-TenantId: ibank-usa' \
+--header 'Authorization: Bearer token'
 ```
 
 ```json
-{
   "batch_id": "UUID",
 	"request_id": "UUID",
 	"notes": "Bulk transfers",
@@ -203,6 +201,46 @@ curl -X GET <https://ph.ee/channel/bulk/transfer?request_id={UUID}&detailed={tru
 	"file": "S3 link", // Based on detailed boolean passed in req param
   "created_at": 1545383037
 }
+```
+
+### 5. Batch Details
+
+```bash
+curl --location --request GET 'https://ops-bk.sandbox.fynarfin.io/api/v1/batch/detail?batchId=45e2baca-b087-4d90-8392-da2961f9b9ed&pageNo=1&pageSize=10' \
+--header 'Accept-Language: en-US,en;q=0.5' \
+--header 'Platform-TenantId: ibank-usa' \
+--header 'Authorization: Bearer token'
+```
+
+```json
+[
+    {
+        "id": 568,
+        "workflowInstanceKey": 2251799907439003,
+        "transactionId": "e5eea064-1445-4d32-bc55-bd9826c779a0",
+        "startedAt": 1629130966000,
+        "completedAt": 1629130967000,
+        "status": "IN_PROGRESS",
+        "statusDetail": null,
+        "payeeDfspId": "ibank-india",
+        "payeePartyId": "919900878571",
+        "payeePartyIdType": "MSISDN",
+        "payeeFee": null,
+        "payeeFeeCurrency": null,
+        "payeeQuoteCode": null,
+        "payerDfspId": "ibank-usa",
+        "payerPartyId": "7543010",
+        "payerPartyIdType": "MSISDN",
+        "payerFee": null,
+        "payerFeeCurrency": null,
+        "payerQuoteCode": null,
+        "amount": 448,
+        "currency": "USD",
+        "direction": "OUTGOING",
+        "errorInformation": "{\\\"errorInformation\\\":{\\\"errorDescription\\\":\\\"Invalid responseCode 500 for transfer on PAYER side, transactionId: e5eea064-1445-4d32-bc55-bd9826c779a0 Message: {\\\\\\\"timestamp\\\\\\\":1629130966891,\\\\\\\"status\\\\\\\":500,\\\\\\\"error\\\\\\\":\\\\\\\"Internal Server Error\\\\\\\",\\\\\\\"message\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"path\\\\\\\":\\\\\\\"/fineract-provider/api/v1/interoperation/transfers\\\\\\\"}\\\",\\\"errorCode\\\":\\\"4101\\\"}}",
+        "batchId": "c02a14f0-5e7e-44a1-88eb-5584a21e6f28"
+    }
+]
 ```
 
 ## Payment Routing

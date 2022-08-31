@@ -2,7 +2,7 @@
 
 **Scope:** payments\
 **Swagger definition:** [https://raw.githubusercontent.com/OpenBankingUK/read-write-api-specs/v3.1.2/dist/payment-initiation-swagger.yaml](https://raw.githubusercontent.com/OpenBankingUK/read-write-api-specs/v3.1.2-RC1/dist/payment-initiation-swagger.yaml)\
-**OpenBanking documentation: **[https://openbanking.atlassian.net/wiki/spaces/DZ/pages/1077805296/Account+and+Transaction+API+Specification+-+v3.1.2](https://openbanking.atlassian.net/wiki/spaces/DZ/pages/1077805743/Payment+Initiation+API+Specification+-+v3.1.2)
+**OpenBanking documentation:** [https://openbanking.atlassian.net/wiki/spaces/DZ/pages/1077805296/Account+and+Transaction+API+Specification+-+v3.1.2](https://openbanking.atlassian.net/wiki/spaces/DZ/pages/1077805743/Payment+Initiation+API+Specification+-+v3.1.2)
 
 **Implement section**
 
