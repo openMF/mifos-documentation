@@ -95,8 +95,6 @@ To provide a granular level of control, the bulk processor supports multiple con
 
 
 
-
-
 ### 1. Bulk Transfer
 
 Use below csv file for refernece.
@@ -176,14 +174,14 @@ curl --location --request POST 'https://bulk-connector.sandbox.fynarfin.io/batch
 ### 2. Bulk Transfer Status
 
 ```bash
-curl --location --request GET 'https://ops-bk.sandbox.fynarfin.io/api/v1/batch?batchId=3112a0ba-0733-4133-ae24-fc3310cb7dfe' \
+curl --location --request GET 'https://ops-bk.sandbox.fynarfin.io/api/v1/batchtransactions/3112a0ba-0733-4133-ae24-fc3310cb7dfe' \
 --header 'Platform-TenantId: ibank-usa' \
 --header 'Authorization: Bearer token'
 ```
 
-```json
-  "batch_id": "UUID",
-	"request_id": "UUID",
+<pre class="language-json"><code class="lang-json"><strong>{  
+</strong><strong>  "batch_id": "UUID",
+</strong>	"request_id": "UUID",
 	"notes": "Bulk transfers",
   "status": "processing",
   "mode": "{payment_mode}",
@@ -193,16 +191,14 @@ curl --location --request GET 'https://ops-bk.sandbox.fynarfin.io/api/v1/batch?b
 	"failed": 20,
 	"file": "S3 link", // Based on detailed boolean passed in req param
   "created_at": 1545383037
-}
-```
+}</code></pre>
 
 ### 3. Batch Details
 
 ```bash
-curl --location --request GET 'https://ops-bk.sandbox.fynarfin.io/api/v1/batch/detail?batchId=45e2baca-b087-4d90-8392-da2961f9b9ed&pageNo=1&pageSize=10' \
---header 'Accept-Language: en-US,en;q=0.5' \
+curl --location --request GET 'https://ops-bk.sandbox.fynarfin.io/api/v1/batchtransactions/45e2baca-b087-4d90-8392-da2961f9b9ed/detail?pageNo=1&pageSize=10' \
 --header 'Platform-TenantId: ibank-usa' \
---header 'Authorization: Bearer token'
+--header 'Authorization: Bearer Token'
 ```
 
 ```json
