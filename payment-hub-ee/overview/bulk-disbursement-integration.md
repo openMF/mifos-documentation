@@ -178,9 +178,23 @@ curl -X GET <https://ph.ee/channel/{payment_mode}/transfer>
 
 ### 3. Bulk Transfer
 
-{% file src="../../.gitbook/assets/ph-ee-bulk-demo-6.csv" %}
-File to be used with this request
-{% endfile %}
+Use below csv file for refernece.
+
+```csv
+id,request_id,payment_mode,payer_identifier_type,payer_identifier,payee_identifier_type,payee_identifier,amount,currency,note
+0,f1e22fe3-9740-4fba-97b6-78f43bfa7f2f,slcb,accountNumber,003001003874120160,accountNumber,927549027483,850,USD,Test Payee Payment
+1,72aa3ea4-e6f6-4880-877f-39f6ac4d052e,slcb,accountNumber,003001003873110196,accountNumber,927549027483,222,USD,Test Payee Payment
+2,f1e22fe3-9740-4fba-97b6-78f43bfa7f2f,slcb,accountNumber,003001003874120160,accountNumber,927549027483,850,USD,Test Payee Payment
+3,72aa3ea4-e6f6-4880-877f-39f6ac4d052e,slcb,accountNumber,003001003873110196,accountNumber,927549027483,222,USD,Test Payee Payment
+4,f1e22fe3-9740-4fba-97b6-78f43bfa7f2f,mojaloop,accountNumber,003001003874120160,mosip,437892675228,850,USD,Test Payee Payment
+5,72aa3ea4-e6f6-4880-877f-39f6ac4d052e,mojaloop,accountNumber,003001003873110196,mosip,437892675228,222,USD,Test Payee Payment
+6,f1e22fe3-9740-4fba-97b6-78f43bfa7f2f,mojaloop,accountNumber,003001003874120160,mosip,437892675228,850,USD,Test Payee Payment
+7,72aa3ea4-e6f6-4880-877f-39f6ac4d052e,mojaloop,accountNumber,003001003873110196,mosip,437892675228,222,USD,Test Payee Payment
+8,f1e22fe3-9740-4fba-97b6-78f43bfa7f2f,gsma,accountNumber,003001003874120160,msisdn,8837461856,850,USD,Test Payee Payment
+9,72aa3ea4-e6f6-4880-877f-39f6ac4d052e,gsma,accountNumber,003001003873110196,msisdn,8837461856,222,USD,Test Payee Payment
+10,f1e22fe3-9740-4fba-97b6-78f43bfa7f2f,gsma,accountNumber,003001003874120160,msisdn,8837461856,850,USD,Test Payee Payment
+11,72aa3ea4-e6f6-4880-877f-39f6ac4d052e,gsma,accountNumber,003001003873110196,msisdn,8837461856,222,USD,Test Payee Payment
+```
 
 ```bash
 curl --location --request POST 'https://bulk-connector.sandbox.fynarfin.io/bulk/transfer/3a4dfab5-0f4f-4e78-b6b5-1aff3859d4e8/ph-ee-bulk-demo-6.csv' \
