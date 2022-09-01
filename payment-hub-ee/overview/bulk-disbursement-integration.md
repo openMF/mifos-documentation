@@ -94,89 +94,9 @@ To provide a granular level of control, the bulk processor supports multiple con
 
 
 
-### 1. Create Transfer
 
-```bash
-curl -X POST <https://ph.ee/channel/{payment_mode}/transfer> \\
--H "Content-Type: application/json" \\
--d '{
-	"request_id": "UUID",
-  "account_number": "7878780080316316",
-  "amount": 1000000,
-	"currency": "RWF",
-  "note": "Sample Transaction"
-}'
-```
 
-```json
-{
-  "id": "UUID",
-	"request_id": "UUID",
-  "amount": 1000000,
-  "currency": "RWF",
-  "note": "Sample Transaction",
-  "fees": 0,
-  "tax": 0,
-  "status": "queued",
-  "mode": "payment_mode",
-  "batch_id": null,
-  "failure_reason": null,
-  "created_at": 1545383037
-}
-```
-
-### 2. Transaction Status
-
-Single Transaction
-
-```bash
-curl -X GET <https://ph.ee/channel/{payment_mode}/transfer?id=UUID>
-curl -X GET <https://ph.ee/channel/{payment_mode}/transfer?request_id=UUID>
-```
-
-```json
-{
-  "id": "UUID",
-	"request_id": "UUID",
-  "amount": 1000000,
-  "currency": "RWF",
-  "note": "Sample Transaction",
-  "fees": 0,
-  "tax": 0,
-  "status": "competed",
-  "mode": "payment_mode",
-  "batch_id": null,
-  "failure_reason": null,
-  "created_at": 1545383037
-}
-```
-
-All Transactions
-
-```bash
-curl -X GET <https://ph.ee/channel/{payment_mode}/transfer>
-```
-
-```json
-[
-	{
-	  "id": "UUID",
-		"request_id": "UUID",
-	  "amount": 1000000,
-	  "currency": "RWF",
-	  "note": "Sample Transaction",
-	  "fees": 0,
-	  "tax": 0,
-	  "status": "competed",
-	  "mode": "payment_mode",
-	  "batch_id": null,
-	  "failure_reason": null,
-	  "created_at": 1545383037
-	}
-]
-```
-
-### 3. Bulk Transfer
+### 1. Bulk Transfer
 
 Use below csv file for refernece.
 
@@ -210,7 +130,7 @@ curl --location --request POST 'https://bulk-connector.sandbox.fynarfin.io/bulk/
 }
 ```
 
-### 4. Bulk Transfer Status
+### 2. Bulk Transfer Status
 
 ```bash
 curl --location --request GET 'https://ops-bk.sandbox.fynarfin.io/api/v1/batch?batchId=3112a0ba-0733-4133-ae24-fc3310cb7dfe' \
@@ -233,7 +153,7 @@ curl --location --request GET 'https://ops-bk.sandbox.fynarfin.io/api/v1/batch?b
 }
 ```
 
-### 5. Batch Details
+### 3. Batch Details
 
 ```bash
 curl --location --request GET 'https://ops-bk.sandbox.fynarfin.io/api/v1/batch/detail?batchId=45e2baca-b087-4d90-8392-da2961f9b9ed&pageNo=1&pageSize=10' \
