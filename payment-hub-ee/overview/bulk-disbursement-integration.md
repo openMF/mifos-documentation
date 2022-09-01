@@ -42,6 +42,7 @@ To provide a granular level of control, the bulk processor supports multiple con
 * mergeback.enable: enable or disable the merging back of the sub batches result.
 * success-threshold-check.enable: enable or disable the success threshold check, use this configuration to make sure at least x percentage of transaction is successful in a batch.
 * success-threshold-check.success-rate: a percentage value that will be used while making the threshold check.
+* acknowledgement.enable: enable or disable the acknowledgement part of the workflow.
 
 **Key Considerations:**
 
