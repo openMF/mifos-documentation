@@ -8,7 +8,7 @@
 
 #### Prioritizing New Use Cases
 
-<table><thead><tr><th>Title</th><th>Sells Well</th><th>Drives Vol</th><th>Changes Market</th><th>Tech Diverse</th><th data-type="number">Index Score</th></tr></thead><tbody><tr><td>Request To Pay</td><td>HIGH</td><td>HIGH</td><td>HIGH</td><td>HIGH</td><td>12</td></tr><tr><td>Bulk Payment</td><td>HIGH</td><td>MEDIUM</td><td>MEDIUM</td><td>MEDIUM</td><td>10</td></tr><tr><td></td><td></td><td></td><td></td><td></td><td>null</td></tr></tbody></table>
+<table><thead><tr><th>Title</th><th>Sells Well</th><th>Drives Vol</th><th>Changes Market</th><th>Tech Diverse</th><th data-type="number">Index Score</th></tr></thead><tbody><tr><td></td><td></td><td></td><td></td><td></td><td>null</td></tr></tbody></table>
 
 #### Staging the Payment
 
