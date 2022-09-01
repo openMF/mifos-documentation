@@ -8,7 +8,8 @@
 
 #### Prioritizing New Use Cases
 
-<table><thead><tr><th>Title</th><th>Sells Well</th><th>Drives Vol</th><th>Changes Market</th><th>Tech Diverse</th><th data-type="number">Index Score</th></tr></thead><tbody><tr><td></td><td></td><td></td><td></td><td></td><td>null</td></tr></tbody></table>
+* G2P
+* P2G
 
 #### Staging the Payment
 
