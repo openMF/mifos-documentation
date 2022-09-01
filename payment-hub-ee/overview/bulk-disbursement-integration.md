@@ -116,10 +116,52 @@ id,request_id,payment_mode,payer_identifier_type,payer_identifier,payee_identifi
 11,72aa3ea4-e6f6-4880-877f-39f6ac4d052e,gsma,accountNumber,003001003873110196,msisdn,8837461856,222,USD,Test Payee Payment
 ```
 
+#### Use the below request along with above CSV file&#x20;
+
 ```bash
-curl --location --request POST 'https://bulk-connector.sandbox.fynarfin.io/bulk/transfer/3a4dfab5-0f4f-4e78-b6b5-1aff3859d4e8/ph-ee-bulk-demo-6.csv' \
+curl --location --request POST 'https://bulk-connector.sandbox.fynarfin.io/batchtransactions?type=csv' \
 --header 'Platform-TenantId: ibank-usa' \
+--header 'X-CorrelationID: 3a4dfab5-0f4f-4e78-b6b5-1aff3859d4e8' \
+--header 'filename: ph-ee-bulk-demo-6.csv
 --form 'data=@"ph-ee-bulk-demo-6.csv"'
+```
+
+#### Use the below request to start a batch only using the filename
+
+```bash
+curl --location --request POST 'https://bulk-connector.sandbox.fynarfin.io/batchtransactions?type=raw' \
+--header 'Platform-TenantId: ibank-usa' \
+--header 'X-CorrelationID: 3a4dfab5-0f4f-4e78-b6b5-1aff3859d4e8' \
+--header 'filename: ph-ee-bulk-demo-6.csv'
+```
+
+#### Use the below request to pass transaction data in the body of the request
+
+```bash
+curl --location --request POST 'https://bulk-connector.sandbox.fynarfin.io/batchtransactions?type=raw' \
+--header 'Platform-TenantId: ibank-usa' \
+--header 'X-CorrelationID: 3a4dfab5-0f4f-4e78-b6b5-1aff3859d4e8' \
+--header 'Content-Type: application/json' \
+--data-raw '[
+    {
+        "creditParty": [
+            {
+                "key": "msisdn",
+                "value": "8837461856"
+            }
+        ],
+        "debitParty": [
+            {
+                "key": "accountnumber",
+                "value": "003001003874120160"
+            }
+        ],
+        "subType": "SLCB",
+        "amount": "820.00",
+        "currency": "RWF",
+        "descriptionText": "Test Payment"
+    }
+]'
 ```
 
 ```json
